@@ -1,0 +1,42 @@
+{
+  "lastVerified": "2026-07-21",
+  "curriculum": [
+    {
+      "title": "D.P.R. 15 marzo 2010, n. 88",
+      "url": "https://www.gazzettaufficiale.it/gunewsletter/dettaglio.jsp?datagu=2010-06-15&numgu=137&redaz=010G0110&service=1&task=dettaglio&tmstp=1276687571279",
+      "type": "official"
+    },
+    {
+      "title": "Direttiva 16 gennaio 2012, n. 4",
+      "url": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.codiceRedazionale=12A03290&atto.dataPubblicazioneGazzetta=2012-03-30&elenco30giorni=false",
+      "type": "official"
+    },
+    {
+      "title": "C1 Meccanica Meccatronica Energia",
+      "url": "https://www.veronatrento.it/attachments/article/286/C1_Mecc%20Meccatr%20Ene.pdf",
+      "type": "official-copy"
+    }
+  ],
+  "android": [
+    {
+      "component": "AGP",
+      "version": "9.3.0",
+      "url": "https://developer.android.com/build/releases/agp-9-3-0-release-notes"
+    },
+    {
+      "component": "Kotlin",
+      "version": "2.4.10",
+      "url": "https://kotlinlang.org/docs/releases.html"
+    },
+    {
+      "component": "Compose BOM",
+      "version": "2026.06.00",
+      "url": "https://developer.android.com/develop/ui/compose/bom"
+    },
+    {
+      "component": "Room",
+      "version": "2.8.4",
+      "url": "https://developer.android.com/jetpack/androidx/releases/room"
+    }
+  ]
+}

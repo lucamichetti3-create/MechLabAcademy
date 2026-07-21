@@ -1,30 +1,9 @@
-package it.lucamichetti.mechlabacademy.worker
-
-import android.content.Context
-import androidx.work.ExistingPeriodicWorkPolicy
-import androidx.work.PeriodicWorkRequestBuilder
-import androidx.work.WorkManager
-import java.util.concurrent.TimeUnit
-
-class ReminderScheduler(context: Context) {
-    private val workManager = WorkManager.getInstance(context.applicationContext)
-
-    fun setEnabled(enabled: Boolean) {
-        if (enabled) {
-            val request = PeriodicWorkRequestBuilder<StudyReminderWorker>(24, TimeUnit.HOURS)
-                .setInitialDelay(12, TimeUnit.HOURS)
-                .build()
-            workManager.enqueueUniquePeriodicWork(
-                UNIQUE_WORK_NAME,
-                ExistingPeriodicWorkPolicy.UPDATE,
-                request,
-            )
-        } else {
-            workManager.cancelUniqueWork(UNIQUE_WORK_NAME)
-        }
-    }
-
-    private companion object {
-        const val UNIQUE_WORK_NAME = "mechlab_daily_study_reminder"
-    }
-}
+#!/usr/bin/env sh
+set -eu
+if command -v gradle >/dev/null 2>&1; then exec gradle "$@"; fi
+cat >&2 <<'EOF'
+Gradle non è installato nel PATH e questo archivio sorgente non include binari.
+Esegui ./scripts/bootstrap-gradle.sh oppure apri il progetto in Android Studio.
+La CI usa gradle/actions/setup-gradle con Gradle 9.5.0.
+EOF
+exit 1
