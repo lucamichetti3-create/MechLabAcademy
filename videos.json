@@ -1,0 +1,21 @@
+{
+  "subjects": 12,
+  "lessons": 840,
+  "complete_lessons": 330,
+  "quiz": 2200,
+  "exercises": 1200,
+  "numeric_exercises": 400,
+  "drawing_exercises": 200,
+  "automation_scenarios": 200,
+  "english_exercises": 200,
+  "humanities_questions": 200,
+  "flashcards": 2100,
+  "glossary_terms": 2500,
+  "maps": 200,
+  "labs": 200,
+  "verified_videos": 19,
+  "video_research_tasks": 1000,
+  "tools": 150,
+  "notes": 2,
+  "study_plan_items": 5
+}

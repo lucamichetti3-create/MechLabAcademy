@@ -1,0 +1,36 @@
+MECHLAB ACADEMY 1.0.0 — VALIDATION REPORT
+Data: 2026-07-21
+
+AMBIENTE
+Java: openjdk version "21.0.10" 2026-01-20
+Kotlin CLI: info: kotlinc-jvm 1.9.0 (JRE 21.0.10+7-Debian-1deb13u1)
+Gradle: non installato
+Android SDK manager: non presente
+
+1) VALIDAZIONE PROGETTO
+Project structure, versions, packages, routes, placeholders and source delimiters: OK
+
+2) VALIDAZIONE DATASET
+{
+  "subjects": 12,
+  "lessons": 840,
+  "quiz": 2200,
+  "exercises": 1200,
+  "flashcards": 2100,
+  "glossary": 2500,
+  "maps": 200,
+  "labs": 200,
+  "videos": 19,
+  "tools": 150,
+  "notes": 2,
+  "study_plan": 5
+}
+Dataset, IDs, unique content fields, foreign references, map edges, video URL shape and XML: OK
+
+3) SMOKE TEST KOTLIN PURO
+Pure Kotlin domain smoke tests: OK
+
+ESITO
+Controlli locali disponibili: SUPERATI.
+Build Android, KSP, Compose, lint, test strumentali e APK: NON ESEGUITI localmente per assenza di Android SDK/Gradle e dipendenze.
+Il workflow .github/workflows/android.yml è predisposto per eseguirli in GitHub Actions.

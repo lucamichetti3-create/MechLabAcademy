@@ -1,0 +1,2 @@
+package it.lucamichetti.mechlabacademy.ui
+object Routes{const val HOME="home";const val SUBJECTS="subjects";const val PLAN="plan";const val EXERCISES="exercises";const val PROFILE="profile";const val SEARCH="search";const val VIDEOS="videos";const val MAPS="maps";const val FLASHCARDS="flashcards";const val LABS="labs";const val GLOSSARY="glossary";const val NOTES="notes";const val TOOLS="tools";const val QUIZ="quiz";fun subject(id:String)="subject/$id";fun lesson(id:String)="lesson/$id";fun map(id:String)="map/$id";fun lab(id:String)="lab/$id"}

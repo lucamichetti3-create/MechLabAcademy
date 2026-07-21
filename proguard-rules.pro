@@ -1,0 +1,64 @@
+name: Android CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate project structure
+        run: python tools/validate_project.py
+
+      - name: Validate content graph
+        run: python tools/validate_dataset.py
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Accept Android SDK licenses
+        run: yes | sdkmanager --licenses >/dev/null || true
+
+      - name: Install Android SDK
+        run: sdkmanager "platforms;android-37" "build-tools;36.0.0" "platform-tools"
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.5.0'
+          cache-read-only: ${{ github.ref != 'refs/heads/main' }}
+
+      - name: Unit tests
+        run: gradle --console=plain --stacktrace testDebugUnitTest
+
+      - name: Lint and debug APK
+        run: gradle --console=plain --stacktrace lintDebug assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: MechLabAcademy-debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: MechLabAcademy-reports
+          path: |
+            app/build/reports
+            app/build/test-results
+          if-no-files-found: warn
