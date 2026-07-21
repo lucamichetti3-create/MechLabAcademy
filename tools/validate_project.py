@@ -31,7 +31,7 @@ if "org.jetbrains.kotlin.android" in root_gradle + app_gradle:
     errors.append("AGP 9 built-in Kotlin: org.jetbrains.kotlin.android must not be applied")
 if 'id("com.android.application") version "9.3.0"' not in root_gradle:
     errors.append("AGP 9.3.0 not configured")
-for key, expected in {"compileSdk": "36", "targetSdk": "36", "minSdk": "23"}.items():
+for key, expected in {"compileSdk": "37", "targetSdk": "36", "minSdk": "23"}.items():
     if versions.get(key) != expected:
         errors.append(f"{key} expected {expected}, found {versions.get(key)}")
 if versions.get("room") != "2.8.4":
