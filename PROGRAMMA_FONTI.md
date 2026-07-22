@@ -1,6 +1,6 @@
 # PROGRAMMA_FONTI — Meccanica, Meccatronica ed Energia
 
-**Ultima verifica delle fonti:** 21 luglio 2026  
+**Ultima verifica delle fonti:** 22 luglio 2026  
 **Ambito:** secondo biennio e quinto anno dell’Istituto Tecnico, settore tecnologico, indirizzo “Meccanica, Meccatronica ed Energia”, con nucleo principalmente riferito all’articolazione “Meccanica e Meccatronica”.
 
 ## 1. Fonti prioritarie

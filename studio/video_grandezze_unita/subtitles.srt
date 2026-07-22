@@ -1,0 +1,79 @@
+1
+00:00:00,000 --> 00:00:03,389
+In meccanica ogni calcolo parte da una misura.
+
+2
+00:00:03,389 --> 00:00:08,326
+Misurare significa confrontare una grandezza con un’unità campione.
+
+3
+00:00:08,326 --> 00:00:13,484
+Un numero senza unità è incompleto e può portare a errori anche gravi.
+
+4
+00:00:13,484 --> 00:00:18,361
+Nel Sistema Internazionale alcune grandezze sono fondamentali.
+
+5
+00:00:18,361 --> 00:00:25,283
+Per il nostro percorso useremo soprattutto metro, chilogrammo, secondo, kelvin e ampere.
+
+6
+00:00:25,283 --> 00:00:28,823
+Da queste ricaviamo molte grandezze derivate.
+
+7
+00:00:28,823 --> 00:00:33,690
+Velocità, accelerazione, forza e potenza sono grandezze derivate.
+
+8
+00:00:33,690 --> 00:00:38,407
+Le loro unità si costruiscono combinando le unità fondamentali.
+
+9
+00:00:38,407 --> 00:00:43,349
+Questo permette anche di controllare dimensionalmente una formula.
+
+10
+00:00:43,349 --> 00:00:47,487
+I prefissi evitano numeri troppo grandi o troppo piccoli.
+
+11
+00:00:47,487 --> 00:00:51,771
+Kilo significa mille, milli un millesimo e mega un milione.
+
+12
+00:00:51,771 --> 00:00:58,232
+In meccanica è molto utile ricordare che un megapascal equivale a un newton su millimetro
+
+13
+00:00:58,232 --> 00:00:58,886
+quadrato.
+
+14
+00:00:58,886 --> 00:01:04,836
+Prima di accettare un risultato, verifica che tutte le unità siano coerenti, che le
+
+15
+00:01:04,836 --> 00:01:10,284
+conversioni siano state eseguite e che l’ordine di grandezza sia realistico.
+
+16
+00:01:10,284 --> 00:01:13,939
+È uno dei controlli più efficaci contro gli errori.
+
+17
+00:01:13,939 --> 00:01:14,994
+Ricapitoliamo.
+
+18
+00:01:14,994 --> 00:01:17,932
+Una misura è formata da valore e unità.
+
+19
+00:01:17,932 --> 00:01:24,863
+Usa unità coerenti del Sistema Internazionale, converti i dati prima del calcolo e controlla
+
+20
+00:01:24,863 --> 00:01:27,500
+sempre le dimensioni della formula.

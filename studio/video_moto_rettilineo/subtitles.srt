@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:06,491
+Nel moto rettilineo uniforme il punto si muove lungo una retta con velocità costante.
+
+2
+00:00:06,491 --> 00:00:08,248
+L’accelerazione è zero.
+
+3
+00:00:08,248 --> 00:00:14,891
+La posizione a un certo istante si ottiene sommando alla posizione iniziale il prodotto tra
+
+4
+00:00:14,891 --> 00:00:16,132
+velocità e tempo.
+
+5
+00:00:16,132 --> 00:00:19,271
+Questa è la legge oraria del moto uniforme.
+
+6
+00:00:19,271 --> 00:00:22,561
+Prima di calcolare, rendi coerenti le unità.
+
+7
+00:00:22,561 --> 00:00:28,915
+Per passare da metri al secondo a chilometri orari si moltiplica per tre virgola sei.
+
+8
+00:00:28,915 --> 00:00:33,203
+Nel grafico spazio tempo, il moto uniforme è una retta.
+
+9
+00:00:33,203 --> 00:00:36,009
+La pendenza rappresenta la velocità:
+
+10
+00:00:36,009 --> 00:00:40,063
+una pendenza negativa indica moto nel verso opposto.
+
+11
+00:00:40,063 --> 00:00:46,760
+Se un carrello viaggia a due metri al secondo per quindici secondi, percorre trenta metri.
+
+12
+00:00:46,760 --> 00:00:50,853
+Il risultato deriva direttamente da velocità per tempo.
+
+13
+00:00:50,853 --> 00:00:51,937
+Ricapitoliamo.
+
+14
+00:00:51,937 --> 00:00:58,746
+Nel moto rettilineo uniforme la velocità è costante, l’accelerazione è zero e il grafico
+
+15
+00:00:58,746 --> 00:01:00,680
+spazio tempo è una retta.

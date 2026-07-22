@@ -15,6 +15,7 @@ import it.lucamichetti.mechlabacademy.data.local.StudyPlanEntity
 import it.lucamichetti.mechlabacademy.data.local.SubjectEntity
 import it.lucamichetti.mechlabacademy.data.local.TechnicalToolEntity
 import it.lucamichetti.mechlabacademy.data.local.VideoEntity
+import it.lucamichetti.mechlabacademy.data.preferences.SettingsRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
@@ -30,13 +31,15 @@ import kotlinx.serialization.json.longOrNull
 class SeedImporter(
     private val context: Context,
     private val database: AcademyDatabase,
+    private val settings: SettingsRepository,
 ) {
     private val json = Json { ignoreUnknownKeys = true }
 
     suspend fun ensureSeeded(onProgress: (String) -> Unit = {}): Result<Unit> =
         withContext(Dispatchers.IO) {
             runCatching {
-                if (database.academyDao().subjectCount() > 0) return@runCatching
+                val currentVersion = settings.getContentVersion()
+                if (database.academyDao().subjectCount() > 0 && currentVersion >= CONTENT_VERSION) return@runCatching
 
                 database.withTransaction {
                     val dao = database.academyDao()
@@ -223,10 +226,13 @@ class SeedImporter(
                     )
 
                     onProgress("Importazione video, strumenti e piano")
+                    val existingVideoState = dao.allVideosNow().associateBy { it.id }
                     dao.insertVideos(
                         read("videos.json").map { item ->
+                            val id = item.string("id")
+                            val existing = existingVideoState[id]
                             VideoEntity(
-                                id = item.string("id"),
+                                id = id,
                                 title = item.string("title"),
                                 author = item.string("author"),
                                 url = item.string("url"),
@@ -241,8 +247,8 @@ class SeedImporter(
                                 reason = item.string("reason"),
                                 lastVerified = item.string("lastVerified"),
                                 linkStatus = item.string("linkStatus"),
-                                favorite = item.boolean("favorite"),
-                                watched = item.boolean("watched"),
+                                favorite = existing?.favorite ?: item.boolean("favorite"),
+                                watched = existing?.watched ?: item.boolean("watched"),
                             )
                         },
                     )
@@ -293,8 +299,11 @@ class SeedImporter(
                         },
                     )
                 }
+                settings.setContentVersion(CONTENT_VERSION)
             }
         }
+
+    private companion object { const val CONTENT_VERSION = 2 }
 
     private fun read(name: String): List<JsonObject> {
         val text = context.assets.open("seed/$name").bufferedReader().use { it.readText() }

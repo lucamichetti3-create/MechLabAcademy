@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:06,731
+Molte grandezze meccaniche, come forza, velocità e accelerazione, sono vettori.
+
+2
+00:00:06,731 --> 00:00:09,373
+Non basta conoscerne il valore:
+
+3
+00:00:09,373 --> 00:00:12,525
+servono intensità, direzione e verso.
+
+4
+00:00:12,525 --> 00:00:15,658
+Un vettore si rappresenta con una freccia.
+
+5
+00:00:15,658 --> 00:00:22,447
+La lunghezza indica l’intensità, la retta d’azione indica la direzione e la punta indica il
+
+6
+00:00:22,447 --> 00:00:22,894
+verso.
+
+7
+00:00:22,894 --> 00:00:28,748
+Per lavorare con un vettore inclinato, lo scomponiamo lungo gli assi cartesiani.
+
+8
+00:00:28,748 --> 00:00:35,261
+La componente orizzontale è effe per coseno alfa e quella verticale è effe per seno alfa.
+
+9
+00:00:35,261 --> 00:00:41,541
+Con una forza di cento newton inclinata di trenta gradi, la componente orizzontale vale
+
+10
+00:00:41,541 --> 00:00:46,737
+circa ottantasei virgola sei newton e quella verticale cinquanta newton.
+
+11
+00:00:46,737 --> 00:00:52,603
+Per sommare più forze, somma prima tutte le componenti orizzontali e verticali.
+
+12
+00:00:52,603 --> 00:00:57,874
+Poi ricostruisci il modulo della risultante con il teorema di Pitagora.
+
+13
+00:00:57,874 --> 00:00:58,937
+Ricapitoliamo.
+
+14
+00:00:58,937 --> 00:01:05,923
+Rappresenta correttamente il vettore, scomponilo sugli assi, somma le componenti con il loro
+
+15
+00:01:05,923 --> 00:01:08,580
+segno e ricostruisci la risultante.

@@ -35537,71 +35537,107 @@
     "subjectId": "mechanics",
     "year": 3,
     "macroarea": "Fondamenti e linguaggio tecnico",
-    "module": "Physical quantities and SI units",
-    "chapter": "Concetti fondamentali",
-    "title": "Fondamenti di Physical quantities and SI units",
-    "durationMinutes": 35,
+    "module": "Grandezze, unità e misura",
+    "chapter": "Sistema Internazionale e controllo dimensionale",
+    "title": "Grandezze fisiche, unità SI e conversioni",
+    "durationMinutes": 65,
     "difficulty": "BASE",
-    "prerequisites": [],
-    "objectives": [
-      "Spiegare il principio di funzionamento di Physical quantities and SI units.",
-      "Identificare grandezze, componenti, ingressi, uscite e vincoli.",
-      "Applicare una procedura con controlli, sicurezza e interpretazione industriale."
+    "prerequisites": [
+      "Operazioni con potenze di dieci",
+      "Proporzioni e notazione scientifica"
     ],
-    "introduction": "La lezione affronta **Physical quantities and SI units** nell'area meccanica ed energia, collegando principio, rappresentazione, calcolo, applicazione e manutenzione.",
-    "explanation": "Lo studio di Physical quantities and SI units parte dal sistema reale: funzione richiesta, confini, ingressi, uscite e condizioni operative. Si individuano quindi componenti e grandezze misurabili, con simboli e unità coerenti. Il modello serve a prevedere il comportamento, ma deve dichiarare semplificazioni e limiti. La procedura tecnica segue una sequenza controllabile: raccolta dati, scelta del modello o dello schema, calcolo o simulazione, verifica, interpretazione e documentazione. In industria il risultato va confrontato con tolleranze, prestazioni, sicurezza, manutenzione, qualità ed efficienza. Prima di agire su una macchina si applicano isolamento delle energie, DPI, istruzioni del costruttore e norme pertinenti. Una scheda finale dovrebbe riportare dati, ipotesi, passaggi, risultato, rischio residuo e controllo effettuato.",
-    "formulas": [],
-    "symbols": [],
-    "intuitiveDemo": "Rappresenta physical quantities and si units con uno schema semplice e modifica una variabile alla volta.",
-    "numericExamples": [],
+    "objectives": [
+      "Distinguere grandezza, valore numerico e unità di misura.",
+      "Usare le principali unità fondamentali e derivate del Sistema Internazionale.",
+      "Convertire correttamente prefissi e unità tecniche.",
+      "Controllare dimensionalmente formule e risultati."
+    ],
+    "introduction": "In officina, in laboratorio e nel calcolo tecnico un numero senza unità non è un dato completo. La stessa scrittura “25” può indicare millimetri, metri, newton o gradi: confondere l’unità significa descrivere un oggetto completamente diverso. Questa lezione costruisce il linguaggio quantitativo necessario a tutta la meccanica.",
+    "explanation": "Una grandezza fisica è una proprietà misurabile di un corpo o di un fenomeno. La misura nasce dal confronto con un’unità campione ed è sempre composta da valore numerico e unità. Nel Sistema Internazionale useremo soprattutto metro, chilogrammo, secondo, kelvin e ampere. Da esse derivano velocità, accelerazione, forza, pressione, lavoro e potenza. I prefissi decimali consentono di passare tra multipli e sottomultipli: kilo vale mille, milli un millesimo, micro un milionesimo e mega un milione. Prima di inserire dati in una formula occorre convertirli in unità coerenti. Il controllo dimensionale verifica che i due membri di un’equazione abbiano la stessa natura fisica; non dimostra che la formula sia corretta, ma individua molti errori di trascrizione e conversione.",
+    "formulas": [
+      "v = s/t",
+      "a = Δv/Δt",
+      "F = m·a",
+      "p = F/A",
+      "L = F·s",
+      "P = L/t",
+      "1 MPa = 1 N/mm²"
+    ],
+    "symbols": [
+      "s: spazio [m]",
+      "t: tempo [s]",
+      "v: velocità [m/s]",
+      "a: accelerazione [m/s²]",
+      "m: massa [kg]",
+      "F: forza [N]",
+      "p: pressione o tensione [Pa]",
+      "P: potenza [W]"
+    ],
+    "intuitiveDemo": [
+      "Confronta 0,5 m, 50 cm e 500 mm: rappresentano la stessa lunghezza con scale diverse.",
+      "Prova a sommare 2 m e 30 cm senza conversione, poi converti 30 cm in 0,30 m."
+    ],
+    "numericExamples": [
+      "Una barra lunga 850 mm misura 0,850 m.",
+      "Una forza di 4,5 kN equivale a 4500 N.",
+      "Una tensione di 120 N/mm² equivale a 120 MPa."
+    ],
     "industrialExamples": [
-      "Riconoscere Physical quantities and SI units in una macchina, impianto, ciclo produttivo o documento tecnico.",
-      "Valutare effetto su prestazione, qualità, sicurezza, energia e manutenzione."
+      "Quote di disegno espresse in millimetri e calcoli strutturali in metri.",
+      "Pressioni idrauliche in bar o megapascal.",
+      "Potenza dei motori in kilowatt e coppia in newton metro."
     ],
     "practicalExamples": [
-      "Disegnare uno schema funzionale con ingressi, trasformazione e uscite.",
-      "Preparare una procedura di verifica indicando strumento, unità, tolleranza e criterio di accettazione."
+      "Annotare sempre l’unità accanto a ogni dato.",
+      "Preparare una riga di conversione prima del calcolo.",
+      "Confrontare il risultato con un ordine di grandezza realistico."
     ],
     "crossLinks": [
-      "math",
-      "english"
+      "Matematica: notazione scientifica e proporzioni.",
+      "Tecnologie: metrologia ed errori di misura.",
+      "Disegno: unità e scale di rappresentazione."
     ],
     "commonErrors": [
-      "Usare una formula senza dichiarare unità e ipotesi.",
-      "Confondere componente, funzione e grandezza misurata.",
-      "Trascurare protezioni, energia residua o limiti del modello."
+      "Confondere massa in chilogrammi e forza peso in newton.",
+      "Usare millimetri e metri nella stessa formula senza conversione.",
+      "Scrivere N/m² e N/mm² come se fossero equivalenti.",
+      "Omettere le unità nei passaggi intermedi."
     ],
     "keywords": [
-      "physical",
-      "quantities",
-      "and",
-      "si",
-      "units"
+      "grandezza",
+      "unità SI",
+      "conversione",
+      "prefisso",
+      "dimensione",
+      "newton",
+      "pascal",
+      "watt"
     ],
-    "summary": "Physical quantities and SI units: funzione, principio, grandezze, modello, verifica, applicazione e sicurezza.",
+    "summary": "Ogni misura è valore più unità. Il Sistema Internazionale rende confrontabili dati e formule. Prima del calcolo si convertono le unità; dopo il calcolo si verificano dimensioni e ordine di grandezza.",
     "selfCheck": [
-      "Qual è la funzione di Physical quantities and SI units?",
-      "Quali dati e unità servono per verificarlo?",
-      "Quale guasto o errore operativo è più probabile?"
+      "Che differenza c’è tra massa e peso?",
+      "Quanti newton sono 2,4 kN?",
+      "Perché 1 N/mm² equivale a 1 MPa?",
+      "Che cosa può rilevare il controllo dimensionale?"
     ],
     "guidedExercises": [
-      {
-        "prompt": "Costruisci uno schema di analisi per Physical quantities and SI units.",
-        "hint": "Elenca dati, incognite, ipotesi, relazioni e verifica.",
-        "solution": "Schema minimo: sistema → dati → modello → calcolo/argomentazione → controllo → conclusione."
-      }
+      "Converti 72 km/h in m/s. Soluzione: 72/3,6 = 20 m/s.",
+      "Converti 3500 mm² in m². Soluzione: 3500·10⁻⁶ = 0,0035 m²."
     ],
     "autonomousExercises": [
-      {
-        "prompt": "Trova un esempio reale di Physical quantities and SI units e descrivilo in 8-12 righe.",
-        "solution": "La risposta deve collegare fenomeno, componenti, grandezze, rischi e controllo."
-      }
+      "Converti 0,025 m in millimetri.",
+      "Esprimi 2,5 MW in watt.",
+      "Verifica dimensionalmente F = m·a."
     ],
     "solutions": [
-      "Usare il procedimento esplicitato negli esercizi e motivare ogni passaggio."
+      "0,025 m = 25 mm.",
+      "2,5 MW = 2 500 000 W.",
+      "kg·m/s² corrisponde al newton."
     ],
     "approfondimenti": [
-      "Collegamento tra physical quantities and si units e sicurezza, qualità o manutenzione."
+      "Analisi dimensionale e teorema di Buckingham.",
+      "Catena di riferibilità metrologica.",
+      "Videolezione originale MechLab disponibile offline."
     ],
     "sourceRefs": [
       {
@@ -35615,82 +35651,106 @@
     ],
     "status": "COMPLETE",
     "sortOrder": 1,
-    "contentVersion": 1
+    "contentVersion": 2
   },
   {
     "id": "lesson_mechanics_002",
     "subjectId": "mechanics",
     "year": 3,
-    "macroarea": "Fondamenti e linguaggio tecnico",
-    "module": "Vectors",
-    "chapter": "Concetti fondamentali",
-    "title": "Fondamenti di Vectors",
-    "durationMinutes": 45,
+    "macroarea": "Statica",
+    "module": "Vettori e componenti",
+    "chapter": "Rappresentazione e operazioni vettoriali",
+    "title": "Vettori, componenti e risultante",
+    "durationMinutes": 75,
     "difficulty": "BASE",
-    "prerequisites": [],
+    "prerequisites": [
+      "Piano cartesiano",
+      "Teorema di Pitagora",
+      "Seno e coseno di un angolo"
+    ],
     "objectives": [
-      "Spiegare il principio di funzionamento di Vectors.",
-      "Identificare grandezze, componenti, ingressi, uscite e vincoli.",
-      "Applicare una procedura con controlli, sicurezza e interpretazione industriale."
+      "Riconoscere grandezze scalari e vettoriali.",
+      "Rappresentare intensità, direzione e verso.",
+      "Scomporre un vettore sugli assi cartesiani.",
+      "Somma­re vettori e ricostruire la risultante."
     ],
-    "introduction": "La lezione affronta **Vectors** nell'area meccanica ed energia, collegando principio, rappresentazione, calcolo, applicazione e manutenzione.",
-    "explanation": "Lo studio di Vectors parte dal sistema reale: funzione richiesta, confini, ingressi, uscite e condizioni operative. Si individuano quindi componenti e grandezze misurabili, con simboli e unità coerenti. Il modello serve a prevedere il comportamento, ma deve dichiarare semplificazioni e limiti. La procedura tecnica segue una sequenza controllabile: raccolta dati, scelta del modello o dello schema, calcolo o simulazione, verifica, interpretazione e documentazione. In industria il risultato va confrontato con tolleranze, prestazioni, sicurezza, manutenzione, qualità ed efficienza. Prima di agire su una macchina si applicano isolamento delle energie, DPI, istruzioni del costruttore e norme pertinenti. Una scheda finale dovrebbe riportare dati, ipotesi, passaggi, risultato, rischio residuo e controllo effettuato.",
+    "introduction": "Forza, velocità e accelerazione non sono descritte da un solo numero: una forza di 500 N verso l’alto produce un effetto diverso dalla stessa forza verso destra. Il vettore è lo strumento matematico che conserva intensità, direzione e verso.",
+    "explanation": "Un vettore si rappresenta con una freccia: la lunghezza è proporzionale al modulo, la retta individua la direzione e la punta indica il verso. Nel piano, un vettore può essere sostituito dalle sue componenti cartesiane. Se l’angolo α è misurato dall’asse x positivo, Fx = F cos α e Fy = F sin α, con segni determinati dal quadrante. Per sommare più vettori si sommano separatamente tutte le componenti x e y. La risultante ha modulo R = radice di Rx al quadrato più Ry al quadrato; l’angolo si ricava con la funzione arcotangente tenendo conto del quadrante. Un buon diagramma evita quasi tutti gli errori di segno.",
     "formulas": [
-      "|v| = √(vₓ²+vᵧ²+v_z²)"
+      "Fx = F·cos α",
+      "Fy = F·sin α",
+      "Rx = ΣFx",
+      "Ry = ΣFy",
+      "R = √(Rx² + Ry²)",
+      "α = atan2(Ry,Rx)"
     ],
-    "symbols": [],
-    "intuitiveDemo": "Rappresenta vectors con uno schema semplice e modifica una variabile alla volta.",
+    "symbols": [
+      "F: modulo del vettore [unità della grandezza]",
+      "Fx, Fy: componenti cartesiane",
+      "R: risultante",
+      "α: angolo rispetto all’asse x"
+    ],
+    "intuitiveDemo": [
+      "Tira una scatola con una corda inclinata: una componente la trascina, l’altra la alleggerisce.",
+      "Disegna due spostamenti consecutivi e unisci il punto iniziale con quello finale."
+    ],
     "numericExamples": [
-      {
-        "title": "Esempio di impostazione",
-        "data": "Definire dati e unità per un caso su Vectors.",
-        "solution": "Dichiarare ipotesi, applicare il modello, verificare unità e interpretare il risultato."
-      }
+      "F = 100 N a 30°: Fx = 86,6 N e Fy = 50 N.",
+      "Rx = 300 N e Ry = 400 N: R = 500 N."
     ],
     "industrialExamples": [
-      "Riconoscere Vectors in una macchina, impianto, ciclo produttivo o documento tecnico.",
-      "Valutare effetto su prestazione, qualità, sicurezza, energia e manutenzione."
+      "Scomposizione della forza di un tirante.",
+      "Carichi inclinati su staffe e telai.",
+      "Velocità di un utensile lungo assi macchina."
     ],
     "practicalExamples": [
-      "Disegnare uno schema funzionale con ingressi, trasformazione e uscite.",
-      "Preparare una procedura di verifica indicando strumento, unità, tolleranza e criterio di accettazione."
+      "Disegnare gli assi prima di assegnare i segni.",
+      "Indicare sempre da quale asse viene misurato l’angolo.",
+      "Usare atan2 o verificare il quadrante del risultato."
     ],
     "crossLinks": [
-      "math",
-      "english"
+      "Matematica: trigonometria.",
+      "Disegno: scale grafiche e proiezioni.",
+      "Sistemi: vettori di posizione e movimento degli assi."
     ],
     "commonErrors": [
-      "Usare una formula senza dichiarare unità e ipotesi.",
-      "Confondere componente, funzione e grandezza misurata.",
-      "Trascurare protezioni, energia residua o limiti del modello."
+      "Scambiare seno e coseno.",
+      "Perdere il segno di una componente.",
+      "Somma­re direttamente i moduli.",
+      "Usare gradi quando la calcolatrice è impostata in radianti."
     ],
     "keywords": [
-      "vectors"
+      "vettore",
+      "modulo",
+      "direzione",
+      "verso",
+      "componente",
+      "risultante",
+      "trigonometria"
     ],
-    "summary": "Vectors: funzione, principio, grandezze, modello, verifica, applicazione e sicurezza.",
+    "summary": "Un vettore contiene modulo, direzione e verso. Nel piano si scompone in Fx e Fy; le componenti si sommano e da Rx e Ry si ricostruiscono modulo e direzione della risultante.",
     "selfCheck": [
-      "Qual è la funzione di Vectors?",
-      "Quali dati e unità servono per verificarlo?",
-      "Quale guasto o errore operativo è più probabile?"
+      "Qual è la differenza tra scalare e vettore?",
+      "Quando Fx è negativa?",
+      "Perché non si sommano sempre i moduli?",
+      "Come ricavi il modulo della risultante?"
     ],
     "guidedExercises": [
-      {
-        "prompt": "Costruisci uno schema di analisi per Vectors.",
-        "hint": "Elenca dati, incognite, ipotesi, relazioni e verifica.",
-        "solution": "Schema minimo: sistema → dati → modello → calcolo/argomentazione → controllo → conclusione."
-      }
+      "Scomponi 200 N a 60°: Fx = 100 N, Fy ≈ 173,2 N.",
+      "Somma F1 = (100,0) N e F2 = (0,80) N: R ≈ 128,1 N a 38,7°."
     ],
     "autonomousExercises": [
-      {
-        "prompt": "Trova un esempio reale di Vectors e descrivilo in 8-12 righe.",
-        "solution": "La risposta deve collegare fenomeno, componenti, grandezze, rischi e controllo."
-      }
+      "Scomponi 500 N a 210°.",
+      "Trova la risultante di (120,50) N e (-40,70) N."
     ],
     "solutions": [
-      "Usare il procedimento esplicitato negli esercizi e motivare ogni passaggio."
+      "Fx ≈ -433 N, Fy = -250 N.",
+      "R = (80,120) N; modulo ≈ 144,2 N."
     ],
     "approfondimenti": [
-      "Collegamento tra vectors e sicurezza, qualità o manutenzione."
+      "Prodotto scalare e lavoro.",
+      "Prodotto vettoriale e momento.",
+      "Videolezione originale MechLab disponibile offline."
     ],
     "sourceRefs": [
       {
@@ -35704,77 +35764,100 @@
     ],
     "status": "COMPLETE",
     "sortOrder": 2,
-    "contentVersion": 1
+    "contentVersion": 2
   },
   {
     "id": "lesson_mechanics_003",
     "subjectId": "mechanics",
     "year": 3,
-    "macroarea": "Fondamenti e linguaggio tecnico",
-    "module": "Force systems",
-    "chapter": "Concetti fondamentali",
-    "title": "Fondamenti di Force systems",
-    "durationMinutes": 55,
+    "macroarea": "Statica",
+    "module": "Sistemi di forze",
+    "chapter": "Risultante e coppia",
+    "title": "Sistemi di forze, risultante e coppia",
+    "durationMinutes": 75,
     "difficulty": "BASE",
     "prerequisites": [
-      "Conoscenze di base collegate a force systems"
+      "Vettori e componenti",
+      "Momento di una forza: introduzione"
     ],
     "objectives": [
-      "Spiegare il principio di funzionamento di Force systems.",
-      "Identificare grandezze, componenti, ingressi, uscite e vincoli.",
-      "Applicare una procedura con controlli, sicurezza e interpretazione industriale."
+      "Classificare sistemi di forze concorrenti, parallele e generiche.",
+      "Calcolare la risultante traslazionale.",
+      "Determinare la posizione di una risultante mediante i momenti.",
+      "Riconoscere una coppia di forze."
     ],
-    "introduction": "La lezione affronta **Force systems** nell'area meccanica ed energia, collegando principio, rappresentazione, calcolo, applicazione e manutenzione.",
-    "explanation": "Lo studio di Force systems parte dal sistema reale: funzione richiesta, confini, ingressi, uscite e condizioni operative. Si individuano quindi componenti e grandezze misurabili, con simboli e unità coerenti. Il modello serve a prevedere il comportamento, ma deve dichiarare semplificazioni e limiti. La procedura tecnica segue una sequenza controllabile: raccolta dati, scelta del modello o dello schema, calcolo o simulazione, verifica, interpretazione e documentazione. In industria il risultato va confrontato con tolleranze, prestazioni, sicurezza, manutenzione, qualità ed efficienza. Prima di agire su una macchina si applicano isolamento delle energie, DPI, istruzioni del costruttore e norme pertinenti. Una scheda finale dovrebbe riportare dati, ipotesi, passaggi, risultato, rischio residuo e controllo effettuato.",
-    "formulas": [],
-    "symbols": [],
-    "intuitiveDemo": "Rappresenta force systems con uno schema semplice e modifica una variabile alla volta.",
-    "numericExamples": [],
+    "introduction": "Una staffa, un albero o una trave sono quasi sempre caricati da più azioni contemporaneamente. Ridurre il sistema a una risultante e a un momento equivalente permette di comprenderne l’effetto globale.",
+    "explanation": "Le forze concorrenti hanno rette d’azione che passano per uno stesso punto e si sommano vettorialmente. Le forze parallele si sommano algebricamente; la posizione della risultante si determina imponendo che il suo momento sia uguale alla somma dei momenti delle forze originarie. Un sistema generico nel piano può essere ridotto, rispetto a un polo scelto, a una forza risultante R e a un momento risultante M. Due forze uguali, parallele e opposte applicate su rette distinte formano una coppia: la risultante è nulla, ma rimane un momento C = F·d indipendente dal polo. Il diagramma del corpo libero deve mostrare tutte le azioni esterne e le quote necessarie.",
+    "formulas": [
+      "R = ΣF",
+      "Rx = ΣFx",
+      "Ry = ΣFy",
+      "M_O = ΣM_Oi",
+      "x_R = Σ(F_i·x_i)/ΣF_i per forze parallele",
+      "C = F·d"
+    ],
+    "symbols": [
+      "R: forza risultante [N]",
+      "M_O: momento risultante rispetto a O [N·m]",
+      "d: distanza tra le rette d’azione [m]"
+    ],
+    "intuitiveDemo": [
+      "Spingi un volante con due mani in versi opposti: non trasli il volante, ma lo fai ruotare.",
+      "Sostituisci due pesi su una mensola con un unico peso equivalente nella posizione corretta."
+    ],
+    "numericExamples": [
+      "100 N e 150 N nello stesso verso producono R = 250 N.",
+      "Due forze da 200 N, opposte e distanti 0,40 m, producono C = 80 N·m."
+    ],
     "industrialExamples": [
-      "Riconoscere Force systems in una macchina, impianto, ciclo produttivo o documento tecnico.",
-      "Valutare effetto su prestazione, qualità, sicurezza, energia e manutenzione."
+      "Riduzione dei carichi su supporti e cuscinetti.",
+      "Coppia applicata da una chiave o da un motore.",
+      "Risultante delle pressioni su una superficie."
     ],
     "practicalExamples": [
-      "Disegnare uno schema funzionale con ingressi, trasformazione e uscite.",
-      "Preparare una procedura di verifica indicando strumento, unità, tolleranza e criterio di accettazione."
+      "Scegliere un polo comodo.",
+      "Separare effetto traslatorio ed effetto rotatorio.",
+      "Verificare che il sistema ridotto conservi forze e momenti."
     ],
     "crossLinks": [
-      "math",
-      "english"
+      "Resistenza dei materiali: caratteristiche di sollecitazione.",
+      "Macchine: coppia motrice e resistente.",
+      "Disegno: diagramma del corpo libero."
     ],
     "commonErrors": [
-      "Usare una formula senza dichiarare unità e ipotesi.",
-      "Confondere componente, funzione e grandezza misurata.",
-      "Trascurare protezioni, energia residua o limiti del modello."
+      "Dimenticare la posizione della risultante.",
+      "Confondere coppia con due forze che si annullano completamente.",
+      "Cambiare polo senza aggiornare il momento."
     ],
     "keywords": [
-      "force",
-      "systems"
+      "sistema di forze",
+      "risultante",
+      "momento risultante",
+      "coppia",
+      "equivalenza"
     ],
-    "summary": "Force systems: funzione, principio, grandezze, modello, verifica, applicazione e sicurezza.",
+    "summary": "Un sistema piano è descritto da risultante e momento rispetto a un polo. Una coppia ha risultante nulla e momento non nullo. Due sistemi sono equivalenti quando producono la stessa forza e lo stesso momento.",
     "selfCheck": [
-      "Qual è la funzione di Force systems?",
-      "Quali dati e unità servono per verificarlo?",
-      "Quale guasto o errore operativo è più probabile?"
+      "Che cosa conserva una riduzione equivalente?",
+      "Perché una coppia non può essere sostituita da una sola forza?",
+      "Come si trova la posizione di una risultante parallela?"
     ],
     "guidedExercises": [
-      {
-        "prompt": "Costruisci uno schema di analisi per Force systems.",
-        "hint": "Elenca dati, incognite, ipotesi, relazioni e verifica.",
-        "solution": "Schema minimo: sistema → dati → modello → calcolo/argomentazione → controllo → conclusione."
-      }
+      "Due forze parallele da 100 N a x=0 e 300 N a x=0,40 m: R=400 N e xR=0,30 m.",
+      "Coppia: F=250 N, d=0,20 m; C=50 N·m."
     ],
     "autonomousExercises": [
-      {
-        "prompt": "Trova un esempio reale di Force systems e descrivilo in 8-12 righe.",
-        "solution": "La risposta deve collegare fenomeno, componenti, grandezze, rischi e controllo."
-      }
+      "Riduci tre forze parallele da 100, 200 e -50 N applicate a 0, 0,5 e 1 m.",
+      "Calcola il momento di una coppia da 600 N con distanza 0,12 m."
     ],
     "solutions": [
-      "Usare il procedimento esplicitato negli esercizi e motivare ogni passaggio."
+      "R=250 N; momento rispetto a x=0: 50 N·m; xR=0,20 m.",
+      "C=72 N·m."
     ],
     "approfondimenti": [
-      "Collegamento tra force systems e sicurezza, qualità o manutenzione."
+      "Teorema di Varignon.",
+      "Sistemi equivalenti forza-coppia.",
+      "Videolezione originale MechLab disponibile offline."
     ],
     "sourceRefs": [
       {
@@ -35788,86 +35871,115 @@
     ],
     "status": "COMPLETE",
     "sortOrder": 3,
-    "contentVersion": 1
+    "contentVersion": 2
   },
   {
     "id": "lesson_mechanics_004",
     "subjectId": "mechanics",
     "year": 3,
-    "macroarea": "Fondamenti e linguaggio tecnico",
-    "module": "Moments and couples",
-    "chapter": "Concetti fondamentali",
-    "title": "Fondamenti di Moments and couples",
-    "durationMinutes": 65,
+    "macroarea": "Statica",
+    "module": "Forze, momenti e coppie",
+    "chapter": "Momento di una forza ed equilibrio rotazionale",
+    "title": "Forze, momenti, coppie e leve",
+    "durationMinutes": 70,
     "difficulty": "BASE",
     "prerequisites": [
-      "Conoscenze di base collegate a moments and couples"
+      "Grandezze fisiche e unità di misura",
+      "Vettori e componenti di una forza",
+      "Conversione tra centimetri e metri"
     ],
     "objectives": [
-      "Spiegare il principio di funzionamento di Moments and couples.",
-      "Identificare grandezze, componenti, ingressi, uscite e vincoli.",
-      "Applicare una procedura con controlli, sicurezza e interpretazione industriale."
+      "Definire il momento di una forza rispetto a un punto o a un asse.",
+      "Calcolare correttamente il braccio perpendicolare.",
+      "Stabilire il verso orario o antiorario del momento.",
+      "Impostare l’equilibrio rotazionale mediante la somma algebrica dei momenti.",
+      "Collegare il concetto a chiavi, leve, alberi, freni e strutture."
     ],
-    "introduction": "La lezione affronta **Moments and couples** nell'area meccanica ed energia, collegando principio, rappresentazione, calcolo, applicazione e manutenzione.",
-    "explanation": "Lo studio di Moments and couples parte dal sistema reale: funzione richiesta, confini, ingressi, uscite e condizioni operative. Si individuano quindi componenti e grandezze misurabili, con simboli e unità coerenti. Il modello serve a prevedere il comportamento, ma deve dichiarare semplificazioni e limiti. La procedura tecnica segue una sequenza controllabile: raccolta dati, scelta del modello o dello schema, calcolo o simulazione, verifica, interpretazione e documentazione. In industria il risultato va confrontato con tolleranze, prestazioni, sicurezza, manutenzione, qualità ed efficienza. Prima di agire su una macchina si applicano isolamento delle energie, DPI, istruzioni del costruttore e norme pertinenti. Una scheda finale dovrebbe riportare dati, ipotesi, passaggi, risultato, rischio residuo e controllo effettuato.",
+    "introduction": "Una forza può spostare un corpo, ma può anche farlo ruotare. L’effetto rotatorio non dipende soltanto dall’intensità della forza: conta anche la distanza perpendicolare tra la sua retta d’azione e il punto di rotazione. È il motivo per cui una chiave lunga permette di serrare o svitare un bullone con minore sforzo.",
+    "explanation": "Il momento di una forza rispetto a un punto misura la tendenza della forza a produrre una rotazione. Si sceglie un polo O, si individua la retta d’azione della forza e si misura la distanza perpendicolare b tra il polo e tale retta. Il modulo del momento è M = F·b. Se la forza passa per il polo, il braccio è nullo e il momento è zero. Il segno dipende dalla convenzione adottata: normalmente antiorario positivo e orario negativo. Una coppia è formata da due forze parallele, uguali e opposte, applicate su rette distinte: la risultante delle forze è nulla, ma resta un momento puro. Per l’equilibrio di un corpo rigido piano devono essere soddisfatte sia la somma delle forze uguale a zero sia la somma dei momenti uguale a zero. Nelle applicazioni reali bisogna sempre disegnare il diagramma del corpo libero, convertire le unità e usare il braccio perpendicolare, non la distanza obliqua.",
     "formulas": [
-      "M = F·d"
+      "M = F · b",
+      "M = F · r · sin(θ)",
+      "ΣM_O = 0 in equilibrio rotazionale",
+      "C = F · d per una coppia di forze"
     ],
-    "symbols": [],
-    "intuitiveDemo": "Rappresenta moments and couples con uno schema semplice e modifica una variabile alla volta.",
+    "symbols": [
+      "M: momento della forza [N·m]",
+      "F: intensità della forza [N]",
+      "b: braccio perpendicolare [m]",
+      "r: distanza tra polo e punto di applicazione [m]",
+      "θ: angolo tra r e F [° o rad]",
+      "C: momento di una coppia [N·m]"
+    ],
+    "intuitiveDemo": [
+      "Spingi una porta vicino alle cerniere e poi vicino alla maniglia: a parità di forza, la seconda azione produce un momento maggiore.",
+      "Confronta due chiavi della stessa forma ma di lunghezza diversa: la chiave lunga aumenta il braccio."
+    ],
     "numericExamples": [
-      {
-        "title": "Esempio di impostazione",
-        "data": "Definire dati e unità per un caso su Moments and couples.",
-        "solution": "Dichiarare ipotesi, applicare il modello, verificare unità e interpretare il risultato."
-      }
+      "Una forza di 200 N agisce perpendicolarmente a 0,30 m dal bullone: M = 200·0,30 = 60 N·m.",
+      "Una forza di 500 N agisce con r = 0,40 m e θ = 30°: M = 500·0,40·sin30° = 100 N·m.",
+      "Su una leva, 300 N a 0,20 m sono equilibrati da F a 0,60 m: 300·0,20 = F·0,60, quindi F = 100 N."
     ],
     "industrialExamples": [
-      "Riconoscere Moments and couples in una macchina, impianto, ciclo produttivo o documento tecnico.",
-      "Valutare effetto su prestazione, qualità, sicurezza, energia e manutenzione."
+      "Serraggio controllato di bulloni con chiave dinamometrica.",
+      "Dimensionamento e verifica della coppia trasmessa da un albero.",
+      "Azione frenante su disco e tamburo.",
+      "Bracci di robot, gru, leve di comando e attuatori."
     ],
     "practicalExamples": [
-      "Disegnare uno schema funzionale con ingressi, trasformazione e uscite.",
-      "Preparare una procedura di verifica indicando strumento, unità, tolleranza e criterio di accettazione."
+      "Per svitare un bullone, applica la forza il più possibile perpendicolare alla chiave.",
+      "Se la forza è inclinata, utilizza soltanto la componente perpendicolare al braccio.",
+      "Prima di calcolare le reazioni di una trave, scegli un polo che elimini il maggior numero di incognite."
     ],
     "crossLinks": [
-      "math",
-      "english"
+      "Matematica: trigonometria e prodotto vettoriale.",
+      "Disegno: diagramma del corpo libero e quote funzionali.",
+      "Resistenza dei materiali: momento flettente e momento torcente.",
+      "Tecnologie: coppia di serraggio e controllo degli utensili."
     ],
     "commonErrors": [
-      "Usare una formula senza dichiarare unità e ipotesi.",
-      "Confondere componente, funzione e grandezza misurata.",
-      "Trascurare protezioni, energia residua o limiti del modello."
+      "Usare centimetri nella formula senza convertirli in metri.",
+      "Moltiplicare la forza per la distanza obliqua anziché per il braccio perpendicolare.",
+      "Dimenticare il segno del momento.",
+      "Confondere momento di una forza, coppia e quantità di moto.",
+      "Calcolare soltanto ΣF = 0 e dimenticare ΣM = 0."
     ],
     "keywords": [
-      "moments",
-      "and",
-      "couples"
+      "momento",
+      "forza",
+      "braccio",
+      "leva",
+      "coppia",
+      "equilibrio",
+      "newton metro"
     ],
-    "summary": "Moments and couples: funzione, principio, grandezze, modello, verifica, applicazione e sicurezza.",
+    "summary": "Il momento descrive l’effetto rotatorio di una forza. Vale M = F·b, dove b è la distanza perpendicolare dalla retta d’azione al polo. Il verso determina il segno. Una coppia produce un momento puro. Nell’equilibrio piano devono annullarsi sia la risultante delle forze sia la somma dei momenti.",
     "selfCheck": [
-      "Qual è la funzione di Moments and couples?",
-      "Quali dati e unità servono per verificarlo?",
-      "Quale guasto o errore operativo è più probabile?"
+      "Perché una forza che passa per il polo ha momento nullo?",
+      "Qual è la differenza tra distanza r e braccio b?",
+      "Come cambia il momento se raddoppia il braccio?",
+      "Quali condizioni devono valere per l’equilibrio di un corpo rigido piano?",
+      "Perché la chiave dinamometrica misura una coppia in N·m?"
     ],
     "guidedExercises": [
-      {
-        "prompt": "Costruisci uno schema di analisi per Moments and couples.",
-        "hint": "Elenca dati, incognite, ipotesi, relazioni e verifica.",
-        "solution": "Schema minimo: sistema → dati → modello → calcolo/argomentazione → controllo → conclusione."
-      }
+      "Una leva lunga 0,50 m riceve una forza perpendicolare di 120 N. Calcola il momento e indica il verso. Soluzione: M = 120·0,50 = 60 N·m; il segno dipende dal verso di rotazione.",
+      "Una forza di 250 N è applicata a 0,40 m con angolo 60°. Calcola M. Soluzione: M = 250·0,40·sin60° ≈ 86,6 N·m."
     ],
     "autonomousExercises": [
-      {
-        "prompt": "Trova un esempio reale di Moments and couples e descrivilo in 8-12 righe.",
-        "solution": "La risposta deve collegare fenomeno, componenti, grandezze, rischi e controllo."
-      }
+      "Una chiave lunga 0,25 m deve applicare 80 N·m. Quale forza perpendicolare serve?",
+      "Su un bilanciere, 400 N agiscono a 0,30 m a sinistra. A quale distanza a destra devono agire 250 N per ottenere equilibrio?",
+      "Disegna una porta vista dall’alto e confronta tre punti di applicazione della stessa forza."
     ],
     "solutions": [
-      "Usare il procedimento esplicitato negli esercizi e motivare ogni passaggio."
+      "Esercizio 1: F = M/b = 80/0,25 = 320 N.",
+      "Esercizio 2: 400·0,30 = 250·b; b = 0,48 m.",
+      "Esercizio 3: il momento cresce linearmente con la distanza perpendicolare dalle cerniere."
     ],
     "approfondimenti": [
-      "Collegamento tra moments and couples e sicurezza, qualità o manutenzione."
+      "Momento come prodotto vettoriale M = r × F.",
+      "Coppia motrice, coppia resistente e accelerazione angolare.",
+      "Collegamento ai diagrammi del momento flettente nelle travi.",
+      "Videolezione originale MechLab disponibile offline."
     ],
     "sourceRefs": [
       {
@@ -35881,86 +35993,95 @@
     ],
     "status": "COMPLETE",
     "sortOrder": 4,
-    "contentVersion": 1
+    "contentVersion": 2
   },
   {
     "id": "lesson_mechanics_005",
     "subjectId": "mechanics",
     "year": 3,
-    "macroarea": "Fondamenti e linguaggio tecnico",
-    "module": "Static equilibrium",
-    "chapter": "Concetti fondamentali",
-    "title": "Fondamenti di Static equilibrium",
-    "durationMinutes": 75,
+    "macroarea": "Statica",
+    "module": "Equilibrio dei corpi rigidi",
+    "chapter": "Equazioni cardinali nel piano",
+    "title": "Equilibrio statico e diagramma del corpo libero",
+    "durationMinutes": 85,
     "difficulty": "BASE",
     "prerequisites": [
-      "Conoscenze di base collegate a static equilibrium"
+      "Vettori e componenti",
+      "Momenti e coppie",
+      "Sistemi di forze"
     ],
     "objectives": [
-      "Spiegare il principio di funzionamento di Static equilibrium.",
-      "Identificare grandezze, componenti, ingressi, uscite e vincoli.",
-      "Applicare una procedura con controlli, sicurezza e interpretazione industriale."
+      "Disegnare un diagramma del corpo libero.",
+      "Applicare ΣFx=0, ΣFy=0 e ΣM=0.",
+      "Scegliere un polo utile per ridurre le incognite.",
+      "Interpretare correttamente reazioni negative."
     ],
-    "introduction": "La lezione affronta **Static equilibrium** nell'area meccanica ed energia, collegando principio, rappresentazione, calcolo, applicazione e manutenzione.",
-    "explanation": "Lo studio di Static equilibrium parte dal sistema reale: funzione richiesta, confini, ingressi, uscite e condizioni operative. Si individuano quindi componenti e grandezze misurabili, con simboli e unità coerenti. Il modello serve a prevedere il comportamento, ma deve dichiarare semplificazioni e limiti. La procedura tecnica segue una sequenza controllabile: raccolta dati, scelta del modello o dello schema, calcolo o simulazione, verifica, interpretazione e documentazione. In industria il risultato va confrontato con tolleranze, prestazioni, sicurezza, manutenzione, qualità ed efficienza. Prima di agire su una macchina si applicano isolamento delle energie, DPI, istruzioni del costruttore e norme pertinenti. Una scheda finale dovrebbe riportare dati, ipotesi, passaggi, risultato, rischio residuo e controllo effettuato.",
+    "introduction": "Una struttura può apparire immobile, ma al suo interno forze e momenti sono attivi. L’equilibrio non significa assenza di azioni: significa compensazione esatta delle azioni esterne.",
+    "explanation": "Nel piano un corpo rigido in equilibrio deve soddisfare tre equazioni indipendenti: somma delle forze lungo x uguale a zero, somma delle forze lungo y uguale a zero e somma dei momenti rispetto a qualunque polo uguale a zero. La soluzione inizia con il diagramma del corpo libero: si isola il corpo, si eliminano i vincoli reali e si sostituiscono con le reazioni compatibili. Si riportano carichi, quote e versi ipotizzati. Conviene calcolare prima i momenti rispetto a un punto attraversato da più incognite. Un risultato negativo indica che il verso reale è opposto a quello scelto, non necessariamente che il calcolo sia errato. Alla fine si verificano tutte le equazioni e la plausibilità fisica.",
     "formulas": [
-      "ΣF = 0",
-      "ΣM = 0"
+      "ΣFx = 0",
+      "ΣFy = 0",
+      "ΣM_O = 0"
     ],
-    "symbols": [],
-    "intuitiveDemo": "Rappresenta static equilibrium con uno schema semplice e modifica una variabile alla volta.",
+    "symbols": [
+      "Fx, Fy: componenti delle forze [N]",
+      "M_O: momento rispetto al polo O [N·m]"
+    ],
+    "intuitiveDemo": [
+      "Una bilancia a due bracci è ferma quando i momenti opposti si compensano.",
+      "Un quadro appeso con due cavi distribuisce il peso attraverso le componenti delle tensioni."
+    ],
     "numericExamples": [
-      {
-        "title": "Esempio di impostazione",
-        "data": "Definire dati e unità per un caso su Static equilibrium.",
-        "solution": "Dichiarare ipotesi, applicare il modello, verificare unità e interpretare il risultato."
-      }
+      "Trave appoggiata lunga 4 m con carico centrale 1000 N: per simmetria RA=RB=500 N.",
+      "Leva: 300 N a 0,20 m equilibrati da 100 N a 0,60 m."
     ],
     "industrialExamples": [
-      "Riconoscere Static equilibrium in una macchina, impianto, ciclo produttivo o documento tecnico.",
-      "Valutare effetto su prestazione, qualità, sicurezza, energia e manutenzione."
+      "Reazioni nei supporti di un albero.",
+      "Forze su una mensola o su un telaio.",
+      "Equilibrio di bracci robotici in posizione statica."
     ],
     "practicalExamples": [
-      "Disegnare uno schema funzionale con ingressi, trasformazione e uscite.",
-      "Preparare una procedura di verifica indicando strumento, unità, tolleranza e criterio di accettazione."
+      "Isolare un solo corpo per volta.",
+      "Disegnare le reazioni prima delle equazioni.",
+      "Usare un controllo indipendente sul risultato."
     ],
     "crossLinks": [
-      "math",
-      "english"
+      "Disegno: schemi e quote.",
+      "Resistenza dei materiali: diagrammi interni.",
+      "Sistemi: equilibrio e controllo di posizione."
     ],
     "commonErrors": [
-      "Usare una formula senza dichiarare unità e ipotesi.",
-      "Confondere componente, funzione e grandezza misurata.",
-      "Trascurare protezioni, energia residua o limiti del modello."
+      "Dimenticare una reazione o un carico.",
+      "Usare distanze non perpendicolari nei momenti.",
+      "Applicare più equazioni indipendenti di quante ne consenta il modello.",
+      "Scambiare un risultato negativo per errore automatico."
     ],
     "keywords": [
-      "static",
-      "equilibrium"
+      "equilibrio",
+      "corpo libero",
+      "reazione",
+      "somma forze",
+      "somma momenti"
     ],
-    "summary": "Static equilibrium: funzione, principio, grandezze, modello, verifica, applicazione e sicurezza.",
+    "summary": "L’equilibrio piano richiede ΣFx=0, ΣFy=0 e ΣM=0. Il diagramma del corpo libero traduce vincoli e carichi in un modello risolvibile. Le reazioni si verificano sempre reinserendole nelle equazioni.",
     "selfCheck": [
-      "Qual è la funzione di Static equilibrium?",
-      "Quali dati e unità servono per verificarlo?",
-      "Quale guasto o errore operativo è più probabile?"
+      "Quali sono le tre equazioni dell’equilibrio piano?",
+      "Perché è utile scegliere il polo su un vincolo?",
+      "Che cosa significa una reazione negativa?"
     ],
     "guidedExercises": [
-      {
-        "prompt": "Costruisci uno schema di analisi per Static equilibrium.",
-        "hint": "Elenca dati, incognite, ipotesi, relazioni e verifica.",
-        "solution": "Schema minimo: sistema → dati → modello → calcolo/argomentazione → controllo → conclusione."
-      }
+      "Trave di 6 m con carico 1200 N a 2 m da A: RB·6=1200·2, quindi RB=400 N e RA=800 N."
     ],
     "autonomousExercises": [
-      {
-        "prompt": "Trova un esempio reale di Static equilibrium e descrivilo in 8-12 righe.",
-        "solution": "La risposta deve collegare fenomeno, componenti, grandezze, rischi e controllo."
-      }
+      "Trave di 5 m con 900 N a 1 m da A e 600 N a 4 m da A: calcola le reazioni."
     ],
     "solutions": [
-      "Usare il procedimento esplicitato negli esercizi e motivare ogni passaggio."
+      "RB=(900·1+600·4)/5=660 N; RA=840 N."
     ],
     "approfondimenti": [
-      "Collegamento tra static equilibrium e sicurezza, qualità o manutenzione."
+      "Equilibrio nello spazio.",
+      "Sistemi labili e iperstatici.",
+      "Videolezione originale MechLab disponibile offline."
     ],
     "sourceRefs": [
       {
@@ -35974,86 +36095,95 @@
     ],
     "status": "COMPLETE",
     "sortOrder": 5,
-    "contentVersion": 1
+    "contentVersion": 2
   },
   {
     "id": "lesson_mechanics_006",
     "subjectId": "mechanics",
     "year": 3,
-    "macroarea": "Fondamenti e linguaggio tecnico",
-    "module": "Constraints and reactions",
-    "chapter": "Concetti fondamentali",
-    "title": "Fondamenti di Constraints and reactions",
-    "durationMinutes": 35,
+    "macroarea": "Statica",
+    "module": "Vincoli",
+    "chapter": "Gradi di libertà e reazioni vincolari",
+    "title": "Vincoli, gradi di libertà e reazioni",
+    "durationMinutes": 70,
     "difficulty": "BASE",
     "prerequisites": [
-      "Conoscenze di base collegate a constraints and reactions"
+      "Equilibrio statico",
+      "Forze e momenti"
     ],
     "objectives": [
-      "Spiegare il principio di funzionamento di Constraints and reactions.",
-      "Identificare grandezze, componenti, ingressi, uscite e vincoli.",
-      "Applicare una procedura con controlli, sicurezza e interpretazione industriale."
+      "Definire grado di libertà e vincolo.",
+      "Associare carrello, cerniera e incastro alle reazioni corrette.",
+      "Riconoscere sistemi labili, isostatici e iperstatici a livello introduttivo."
     ],
-    "introduction": "La lezione affronta **Constraints and reactions** nell'area meccanica ed energia, collegando principio, rappresentazione, calcolo, applicazione e manutenzione.",
-    "explanation": "Lo studio di Constraints and reactions parte dal sistema reale: funzione richiesta, confini, ingressi, uscite e condizioni operative. Si individuano quindi componenti e grandezze misurabili, con simboli e unità coerenti. Il modello serve a prevedere il comportamento, ma deve dichiarare semplificazioni e limiti. La procedura tecnica segue una sequenza controllabile: raccolta dati, scelta del modello o dello schema, calcolo o simulazione, verifica, interpretazione e documentazione. In industria il risultato va confrontato con tolleranze, prestazioni, sicurezza, manutenzione, qualità ed efficienza. Prima di agire su una macchina si applicano isolamento delle energie, DPI, istruzioni del costruttore e norme pertinenti. Una scheda finale dovrebbe riportare dati, ipotesi, passaggi, risultato, rischio residuo e controllo effettuato.",
+    "introduction": "Un corpo libero nel piano può traslare in due direzioni e ruotare. I vincoli eliminano alcuni di questi movimenti e, proprio per questo, possono trasmettere forze o momenti.",
+    "explanation": "Nel modello piano un corpo rigido possiede tre gradi di libertà: traslazione x, traslazione y e rotazione. Un carrello ideale impedisce il moto normale alla superficie e fornisce una sola reazione. Una cerniera impedisce le due traslazioni e fornisce due componenti di reazione, ma non un momento. Un incastro impedisce tutte e tre le possibilità e trasmette due forze più un momento. La scelta del modello deve riflettere ciò che il collegamento reale consente: una guida, un cuscinetto o una saldatura possono comportarsi diversamente a seconda della direzione e della rigidezza. Il confronto tra numero di incognite e equazioni disponibili introduce la distinzione tra sistemi labili, isostatici e iperstatici.",
     "formulas": [
-      "ε = ΔL/L₀"
+      "Corpo rigido piano: 3 gradi di libertà",
+      "Carrello: 1 reazione",
+      "Cerniera: 2 reazioni",
+      "Incastro: 2 reazioni + 1 momento"
     ],
-    "symbols": [],
-    "intuitiveDemo": "Rappresenta constraints and reactions con uno schema semplice e modifica una variabile alla volta.",
+    "symbols": [
+      "Rx, Ry: componenti di reazione [N]",
+      "M: momento di reazione [N·m]"
+    ],
+    "intuitiveDemo": [
+      "Una ruota su una rotaia scorre lungo la guida ma non può attraversarla.",
+      "Una porta ruota sulle cerniere ma non trasla."
+    ],
     "numericExamples": [
-      {
-        "title": "Esempio di impostazione",
-        "data": "Definire dati e unità per un caso su Constraints and reactions.",
-        "solution": "Dichiarare ipotesi, applicare il modello, verificare unità e interpretare il risultato."
-      }
+      "Una trave cerniera-carrello ha tre reazioni incognite e tre equazioni: modello isostatico nel piano."
     ],
     "industrialExamples": [
-      "Riconoscere Constraints and reactions in una macchina, impianto, ciclo produttivo o documento tecnico.",
-      "Valutare effetto su prestazione, qualità, sicurezza, energia e manutenzione."
+      "Supporti di alberi e cuscinetti.",
+      "Piedi di macchine e guide lineari.",
+      "Collegamenti saldati modellati come incastri ideali."
     ],
     "practicalExamples": [
-      "Disegnare uno schema funzionale con ingressi, trasformazione e uscite.",
-      "Preparare una procedura di verifica indicando strumento, unità, tolleranza e criterio di accettazione."
+      "Osservare quali movimenti sono realmente impediti.",
+      "Non aggiungere reazioni che il vincolo non può trasmettere.",
+      "Dichiarare l’idealizzazione usata."
     ],
     "crossLinks": [
-      "math",
-      "english"
+      "Disegno: simbologia dei vincoli.",
+      "Progettazione: rigidezza dei collegamenti.",
+      "Sistemi: gradi di libertà di un manipolatore."
     ],
     "commonErrors": [
-      "Usare una formula senza dichiarare unità e ipotesi.",
-      "Confondere componente, funzione e grandezza misurata.",
-      "Trascurare protezioni, energia residua o limiti del modello."
+      "Assegnare un momento a una cerniera ideale.",
+      "Confondere direzione della guida e direzione della reazione del carrello.",
+      "Contare reazioni senza verificare indipendenza geometrica."
     ],
     "keywords": [
-      "constraints",
-      "and",
-      "reactions"
+      "vincolo",
+      "grado di libertà",
+      "carrello",
+      "cerniera",
+      "incastro",
+      "reazione"
     ],
-    "summary": "Constraints and reactions: funzione, principio, grandezze, modello, verifica, applicazione e sicurezza.",
+    "summary": "I vincoli eliminano gradi di libertà e generano reazioni. Nel piano: carrello una reazione, cerniera due, incastro due forze e un momento. Il modello deve rappresentare il collegamento reale in modo dichiarato.",
     "selfCheck": [
-      "Qual è la funzione di Constraints and reactions?",
-      "Quali dati e unità servono per verificarlo?",
-      "Quale guasto o errore operativo è più probabile?"
+      "Quali movimenti impedisce una cerniera?",
+      "Perché il carrello ha una sola reazione?",
+      "Che cosa distingue un sistema labile da uno isostatico?"
     ],
     "guidedExercises": [
-      {
-        "prompt": "Costruisci uno schema di analisi per Constraints and reactions.",
-        "hint": "Elenca dati, incognite, ipotesi, relazioni e verifica.",
-        "solution": "Schema minimo: sistema → dati → modello → calcolo/argomentazione → controllo → conclusione."
-      }
+      "Disegna le reazioni di una trave con cerniera a sinistra e carrello orizzontale a destra."
     ],
     "autonomousExercises": [
-      {
-        "prompt": "Trova un esempio reale di Constraints and reactions e descrivilo in 8-12 righe.",
-        "solution": "La risposta deve collegare fenomeno, componenti, grandezze, rischi e controllo."
-      }
+      "Classifica le reazioni di una mensola incastrata.",
+      "Spiega perché due carrelli paralleli possono lasciare libero uno spostamento."
     ],
     "solutions": [
-      "Usare il procedimento esplicitato negli esercizi e motivare ogni passaggio."
+      "Mensola: Rx, Ry e M.",
+      "I due carrelli forniscono reazioni parallele e non impediscono il moto nella direzione ortogonale alle reazioni."
     ],
     "approfondimenti": [
-      "Collegamento tra constraints and reactions e sicurezza, qualità o manutenzione."
+      "Rigidezza reale dei vincoli.",
+      "Iperstaticità e deformabilità.",
+      "Videolezione originale MechLab disponibile offline."
     ],
     "sourceRefs": [
       {
@@ -36067,7 +36197,7 @@
     ],
     "status": "COMPLETE",
     "sortOrder": 6,
-    "contentVersion": 1
+    "contentVersion": 2
   },
   {
     "id": "lesson_mechanics_007",
@@ -36158,78 +36288,92 @@
     "id": "lesson_mechanics_008",
     "subjectId": "mechanics",
     "year": 3,
-    "macroarea": "Fondamenti e linguaggio tecnico",
-    "module": "Friction",
-    "chapter": "Concetti fondamentali",
-    "title": "Fondamenti di Friction",
-    "durationMinutes": 55,
+    "macroarea": "Statica",
+    "module": "Attrito",
+    "chapter": "Modello di Coulomb",
+    "title": "Attrito statico, dinamico e applicazioni",
+    "durationMinutes": 75,
     "difficulty": "BASE",
     "prerequisites": [
-      "Conoscenze di base collegate a friction"
+      "Equilibrio delle forze",
+      "Reazione normale"
     ],
     "objectives": [
-      "Spiegare il principio di funzionamento di Friction.",
-      "Identificare grandezze, componenti, ingressi, uscite e vincoli.",
-      "Applicare una procedura con controlli, sicurezza e interpretazione industriale."
+      "Distinguere attrito statico e dinamico.",
+      "Calcolare il valore limite dell’attrito statico.",
+      "Verificare se un corpo resta fermo o scivola.",
+      "Collegare l’attrito a freni, frizioni e usura."
     ],
-    "introduction": "La lezione affronta **Friction** nell'area meccanica ed energia, collegando principio, rappresentazione, calcolo, applicazione e manutenzione.",
-    "explanation": "Lo studio di Friction parte dal sistema reale: funzione richiesta, confini, ingressi, uscite e condizioni operative. Si individuano quindi componenti e grandezze misurabili, con simboli e unità coerenti. Il modello serve a prevedere il comportamento, ma deve dichiarare semplificazioni e limiti. La procedura tecnica segue una sequenza controllabile: raccolta dati, scelta del modello o dello schema, calcolo o simulazione, verifica, interpretazione e documentazione. In industria il risultato va confrontato con tolleranze, prestazioni, sicurezza, manutenzione, qualità ed efficienza. Prima di agire su una macchina si applicano isolamento delle energie, DPI, istruzioni del costruttore e norme pertinenti. Una scheda finale dovrebbe riportare dati, ipotesi, passaggi, risultato, rischio residuo e controllo effettuato.",
+    "introduction": "Senza attrito non potremmo camminare, frenare o trasmettere moto con una cinghia. Lo stesso fenomeno, però, produce calore, usura e perdita di rendimento. Occorre capire quando è utile e quando va ridotto.",
+    "explanation": "L’attrito di contatto agisce tangenzialmente e si oppone al moto relativo o alla sua tendenza. Nel modello di Coulomb, l’attrito statico si adatta al valore necessario per mantenere l’equilibrio fino al limite Fs,max = μs N. Non bisogna quindi porre sempre Fs uguale a μs N: prima si calcola la forza richiesta dall’equilibrio e poi la si confronta con il limite. Quando inizia lo scorrimento, si usa Fd = μd N, spesso con μd minore di μs. La reazione normale dipende dai carichi e dall’inclinazione del piano. Il modello è semplificato: materiali, lubrificazione, temperatura, velocità e stato superficiale modificano il comportamento reale.",
     "formulas": [
-      "Fₐ = μ·N"
+      "Fs ≤ μs·N",
+      "Fs,max = μs·N",
+      "Fd = μd·N"
     ],
-    "symbols": [],
-    "intuitiveDemo": "Rappresenta friction con uno schema semplice e modifica una variabile alla volta.",
+    "symbols": [
+      "Fs: attrito statico [N]",
+      "Fd: attrito dinamico [N]",
+      "μs, μd: coefficienti adimensionali",
+      "N: reazione normale [N]"
+    ],
+    "intuitiveDemo": [
+      "Inclina lentamente un piano finché un oggetto inizia a scivolare.",
+      "Confronta la spinta necessaria per avviare e mantenere in moto una scatola."
+    ],
     "numericExamples": [
-      {
-        "title": "Esempio di impostazione",
-        "data": "Definire dati e unità per un caso su Friction.",
-        "solution": "Dichiarare ipotesi, applicare il modello, verificare unità e interpretare il risultato."
-      }
+      "N=500 N e μs=0,40: limite statico 200 N. Una spinta di 150 N non provoca scorrimento.",
+      "Se μd=0,30, durante lo scorrimento Fd=150 N."
     ],
     "industrialExamples": [
-      "Riconoscere Friction in una macchina, impianto, ciclo produttivo o documento tecnico.",
-      "Valutare effetto su prestazione, qualità, sicurezza, energia e manutenzione."
+      "Freni e frizioni.",
+      "Trasmissioni a cinghia.",
+      "Pneumatici e contatto ruota-rotaia.",
+      "Guide, cuscinetti e lubrificazione."
     ],
     "practicalExamples": [
-      "Disegnare uno schema funzionale con ingressi, trasformazione e uscite.",
-      "Preparare una procedura di verifica indicando strumento, unità, tolleranza e criterio di accettazione."
+      "Disegnare l’attrito opposto alla tendenza di moto.",
+      "Calcolare prima N.",
+      "Confrontare domanda di attrito e valore limite."
     ],
     "crossLinks": [
-      "math",
-      "english"
+      "Tecnologie: rugosità e lubrificazione.",
+      "Energia: dissipazione termica.",
+      "Macchine: freni, frizioni e cinghie."
     ],
     "commonErrors": [
-      "Usare una formula senza dichiarare unità e ipotesi.",
-      "Confondere componente, funzione e grandezza misurata.",
-      "Trascurare protezioni, energia residua o limiti del modello."
+      "Imporre sempre F=μN anche in equilibrio statico.",
+      "Usare il peso al posto della normale su un piano inclinato.",
+      "Scegliere il verso dell’attrito senza individuare la tendenza di moto."
     ],
     "keywords": [
-      "friction"
+      "attrito",
+      "statico",
+      "dinamico",
+      "coefficiente",
+      "reazione normale",
+      "scorrimento"
     ],
-    "summary": "Friction: funzione, principio, grandezze, modello, verifica, applicazione e sicurezza.",
+    "summary": "L’attrito statico assume il valore necessario fino a μsN; l’attrito dinamico agisce durante lo scorrimento ed è modellato con μdN. La normale e la tendenza di moto vanno determinate prima del calcolo.",
     "selfCheck": [
-      "Qual è la funzione di Friction?",
-      "Quali dati e unità servono per verificarlo?",
-      "Quale guasto o errore operativo è più probabile?"
+      "Perché Fs non vale sempre μsN?",
+      "Come individui il verso dell’attrito?",
+      "Quali fattori reali non sono inclusi nel modello semplice?"
     ],
     "guidedExercises": [
-      {
-        "prompt": "Costruisci uno schema di analisi per Friction.",
-        "hint": "Elenca dati, incognite, ipotesi, relazioni e verifica.",
-        "solution": "Schema minimo: sistema → dati → modello → calcolo/argomentazione → controllo → conclusione."
-      }
+      "Blocco da 20 kg su piano orizzontale, μs=0,35: N≈196,2 N, limite≈68,7 N. Una forza di 50 N non lo muove."
     ],
     "autonomousExercises": [
-      {
-        "prompt": "Trova un esempio reale di Friction e descrivilo in 8-12 righe.",
-        "solution": "La risposta deve collegare fenomeno, componenti, grandezze, rischi e controllo."
-      }
+      "Per lo stesso blocco, con μd=0,25 e forza applicata 90 N, calcola l’accelerazione dopo l’avvio."
     ],
     "solutions": [
-      "Usare il procedimento esplicitato negli esercizi e motivare ogni passaggio."
+      "Fd≈49,1 N; forza netta≈40,9 N; a≈2,05 m/s²."
     ],
     "approfondimenti": [
-      "Collegamento tra friction e sicurezza, qualità o manutenzione."
+      "Angolo di attrito.",
+      "Attrito volvente.",
+      "Tribologia e lubrificazione.",
+      "Videolezione originale MechLab disponibile offline."
     ],
     "sourceRefs": [
       {
@@ -36243,7 +36387,7 @@
     ],
     "status": "COMPLETE",
     "sortOrder": 8,
-    "contentVersion": 1
+    "contentVersion": 2
   },
   {
     "id": "lesson_mechanics_009",
@@ -36335,80 +36479,93 @@
     "id": "lesson_mechanics_010",
     "subjectId": "mechanics",
     "year": 3,
-    "macroarea": "Fondamenti e linguaggio tecnico",
-    "module": "Uniform rectilinear motion",
-    "chapter": "Concetti fondamentali",
-    "title": "Fondamenti di Uniform rectilinear motion",
-    "durationMinutes": 75,
+    "macroarea": "Cinematica",
+    "module": "Moto rettilineo",
+    "chapter": "Velocità costante e legge oraria",
+    "title": "Moto rettilineo uniforme e grafici",
+    "durationMinutes": 70,
     "difficulty": "BASE",
     "prerequisites": [
-      "Conoscenze di base collegate a uniform rectilinear motion"
+      "Unità di misura",
+      "Equazioni di primo grado",
+      "Piano cartesiano"
     ],
     "objectives": [
-      "Spiegare il principio di funzionamento di Uniform rectilinear motion.",
-      "Identificare grandezze, componenti, ingressi, uscite e vincoli.",
-      "Applicare una procedura con controlli, sicurezza e interpretazione industriale."
+      "Definire posizione, spostamento e velocità media.",
+      "Usare la legge oraria del moto uniforme.",
+      "Interpretare grafici spazio-tempo e velocità-tempo.",
+      "Convertire m/s e km/h."
     ],
-    "introduction": "La lezione affronta **Uniform rectilinear motion** nell'area meccanica ed energia, collegando principio, rappresentazione, calcolo, applicazione e manutenzione.",
-    "explanation": "Lo studio di Uniform rectilinear motion parte dal sistema reale: funzione richiesta, confini, ingressi, uscite e condizioni operative. Si individuano quindi componenti e grandezze misurabili, con simboli e unità coerenti. Il modello serve a prevedere il comportamento, ma deve dichiarare semplificazioni e limiti. La procedura tecnica segue una sequenza controllabile: raccolta dati, scelta del modello o dello schema, calcolo o simulazione, verifica, interpretazione e documentazione. In industria il risultato va confrontato con tolleranze, prestazioni, sicurezza, manutenzione, qualità ed efficienza. Prima di agire su una macchina si applicano isolamento delle energie, DPI, istruzioni del costruttore e norme pertinenti. Una scheda finale dovrebbe riportare dati, ipotesi, passaggi, risultato, rischio residuo e controllo effettuato.",
+    "introduction": "La cinematica descrive come si muove un punto senza chiedere ancora quali forze producano il moto. Il caso più semplice è il moto rettilineo uniforme: traiettoria diritta e velocità costante.",
+    "explanation": "Scelti un asse orientato e un’origine, la posizione s individua il punto. Lo spostamento è Δs = s - s0 e può essere positivo o negativo. Nel moto uniforme la velocità è costante e l’accelerazione è nulla. La legge oraria è s(t)=s0+v t. Nel grafico spazio-tempo compare una retta: la sua pendenza è la velocità. Nel grafico velocità-tempo compare una linea orizzontale e l’area sottostante rappresenta lo spostamento. Per convertire m/s in km/h si moltiplica per 3,6; nel verso opposto si divide per 3,6.",
     "formulas": [
-      "s = s₀ + v·t"
+      "v = Δs/Δt",
+      "s = s0 + v·t",
+      "a = 0",
+      "1 m/s = 3,6 km/h"
     ],
-    "symbols": [],
-    "intuitiveDemo": "Rappresenta uniform rectilinear motion con uno schema semplice e modifica una variabile alla volta.",
+    "symbols": [
+      "s, s0: posizione [m]",
+      "Δs: spostamento [m]",
+      "v: velocità [m/s]",
+      "t: tempo [s]"
+    ],
+    "intuitiveDemo": [
+      "Segna la posizione di un carrello a intervalli uguali: nel moto uniforme le distanze sono uguali.",
+      "Confronta una retta più inclinata e una meno inclinata nel grafico s-t."
+    ],
     "numericExamples": [
-      {
-        "title": "Esempio di impostazione",
-        "data": "Definire dati e unità per un caso su Uniform rectilinear motion.",
-        "solution": "Dichiarare ipotesi, applicare il modello, verificare unità e interpretare il risultato."
-      }
+      "v=2 m/s per 15 s: Δs=30 m.",
+      "72 km/h corrispondono a 20 m/s.",
+      "s0=10 m, v=-3 m/s, t=4 s: s=-2 m."
     ],
     "industrialExamples": [
-      "Riconoscere Uniform rectilinear motion in una macchina, impianto, ciclo produttivo o documento tecnico.",
-      "Valutare effetto su prestazione, qualità, sicurezza, energia e manutenzione."
+      "Nastro trasportatore a velocità costante.",
+      "Avanzamento lineare di un asse macchina nel tratto uniforme.",
+      "Movimentazione automatizzata tra due stazioni."
     ],
     "practicalExamples": [
-      "Disegnare uno schema funzionale con ingressi, trasformazione e uscite.",
-      "Preparare una procedura di verifica indicando strumento, unità, tolleranza e criterio di accettazione."
+      "Definire sempre il verso positivo.",
+      "Distinguere distanza percorsa e spostamento.",
+      "Controllare l’unità del tempo."
     ],
     "crossLinks": [
-      "math",
-      "english"
+      "Matematica: retta e coefficiente angolare.",
+      "Automazione: profili di moto.",
+      "Tecnologie: velocità di avanzamento."
     ],
     "commonErrors": [
-      "Usare una formula senza dichiarare unità e ipotesi.",
-      "Confondere componente, funzione e grandezza misurata.",
-      "Trascurare protezioni, energia residua o limiti del modello."
+      "Confondere posizione e spostamento.",
+      "Usare km/h con secondi e metri.",
+      "Interpretare velocità negativa come valore impossibile."
     ],
     "keywords": [
-      "uniform",
-      "rectilinear",
-      "motion"
+      "cinematica",
+      "posizione",
+      "spostamento",
+      "velocità",
+      "legge oraria",
+      "grafico"
     ],
-    "summary": "Uniform rectilinear motion: funzione, principio, grandezze, modello, verifica, applicazione e sicurezza.",
+    "summary": "Nel moto rettilineo uniforme la velocità è costante, l’accelerazione è zero e s=s0+vt. La pendenza del grafico spazio-tempo è la velocità; il segno indica il verso.",
     "selfCheck": [
-      "Qual è la funzione di Uniform rectilinear motion?",
-      "Quali dati e unità servono per verificarlo?",
-      "Quale guasto o errore operativo è più probabile?"
+      "Che differenza c’è tra distanza e spostamento?",
+      "Che cosa indica la pendenza nel grafico s-t?",
+      "Come si convertono 54 km/h in m/s?"
     ],
     "guidedExercises": [
-      {
-        "prompt": "Costruisci uno schema di analisi per Uniform rectilinear motion.",
-        "hint": "Elenca dati, incognite, ipotesi, relazioni e verifica.",
-        "solution": "Schema minimo: sistema → dati → modello → calcolo/argomentazione → controllo → conclusione."
-      }
+      "Un asse parte da 0,20 m e si muove a 0,05 m/s per 8 s: posizione finale 0,60 m."
     ],
     "autonomousExercises": [
-      {
-        "prompt": "Trova un esempio reale di Uniform rectilinear motion e descrivilo in 8-12 righe.",
-        "solution": "La risposta deve collegare fenomeno, componenti, grandezze, rischi e controllo."
-      }
+      "Un carrello è a 12 m e si muove a -1,5 m/s. Dove si trova dopo 10 s?"
     ],
     "solutions": [
-      "Usare il procedimento esplicitato negli esercizi e motivare ogni passaggio."
+      "s=12-1,5·10=-3 m."
     ],
     "approfondimenti": [
-      "Collegamento tra uniform rectilinear motion e sicurezza, qualità o manutenzione."
+      "Moto relativo.",
+      "Introduzione alla derivata come velocità istantanea.",
+      "Videolezione originale MechLab disponibile offline."
     ],
     "sourceRefs": [
       {
@@ -36422,7 +36579,7 @@
     ],
     "status": "COMPLETE",
     "sortOrder": 10,
-    "contentVersion": 1
+    "contentVersion": 2
   },
   {
     "id": "lesson_mechanics_011",
@@ -36785,80 +36942,97 @@
     "id": "lesson_mechanics_015",
     "subjectId": "mechanics",
     "year": 3,
-    "macroarea": "Fondamenti e linguaggio tecnico",
-    "module": "Work and power",
-    "chapter": "Concetti fondamentali",
-    "title": "Fondamenti di Work and power",
-    "durationMinutes": 75,
-    "difficulty": "BASE",
+    "macroarea": "Dinamica ed energia",
+    "module": "Lavoro e potenza",
+    "chapter": "Potenza traslazionale, rotazionale e rendimento",
+    "title": "Potenza meccanica e rendimento",
+    "durationMinutes": 80,
+    "difficulty": "INTERMEDIA",
     "prerequisites": [
-      "Conoscenze di base collegate a work and power"
+      "Lavoro di una forza",
+      "Velocità lineare e angolare",
+      "Momento torcente"
     ],
     "objectives": [
-      "Spiegare il principio di funzionamento di Work and power.",
-      "Identificare grandezze, componenti, ingressi, uscite e vincoli.",
-      "Applicare una procedura con controlli, sicurezza e interpretazione industriale."
+      "Calcolare potenza media e istantanea.",
+      "Usare P=Fv e P=Mω.",
+      "Convertire watt e kilowatt.",
+      "Calcolare e interpretare il rendimento."
     ],
-    "introduction": "La lezione affronta **Work and power** nell'area meccanica ed energia, collegando principio, rappresentazione, calcolo, applicazione e manutenzione.",
-    "explanation": "Lo studio di Work and power parte dal sistema reale: funzione richiesta, confini, ingressi, uscite e condizioni operative. Si individuano quindi componenti e grandezze misurabili, con simboli e unità coerenti. Il modello serve a prevedere il comportamento, ma deve dichiarare semplificazioni e limiti. La procedura tecnica segue una sequenza controllabile: raccolta dati, scelta del modello o dello schema, calcolo o simulazione, verifica, interpretazione e documentazione. In industria il risultato va confrontato con tolleranze, prestazioni, sicurezza, manutenzione, qualità ed efficienza. Prima di agire su una macchina si applicano isolamento delle energie, DPI, istruzioni del costruttore e norme pertinenti. Una scheda finale dovrebbe riportare dati, ipotesi, passaggi, risultato, rischio residuo e controllo effettuato.",
+    "introduction": "Due macchine possono compiere lo stesso lavoro ma impiegare tempi diversi. La potenza misura quanto rapidamente l’energia viene trasferita; il rendimento indica quanta parte dell’energia assorbita diventa realmente utile.",
+    "explanation": "La potenza media è il rapporto tra lavoro e tempo. Nel moto traslatorio, se forza e velocità sono parallele, P=Fv; in generale compare il prodotto scalare. Nel moto rotatorio P=Mω, relazione fondamentale per motori, riduttori e alberi. La velocità angolare si ottiene dal numero di giri con ω=2πn/60. Il rendimento η è il rapporto tra potenza utile e potenza assorbita; è adimensionale e compreso tra zero e uno. Le perdite derivano da attrito, calore, ventilazione, deformazioni, perdite elettriche e idrauliche. Nei sistemi in cascata, il rendimento totale è il prodotto dei rendimenti dei singoli stadi.",
     "formulas": [
-      "L = F·s·cosα"
+      "P = L/t",
+      "P = F·v",
+      "P = M·ω",
+      "ω = 2πn/60",
+      "η = P_u/P_a",
+      "η_tot = η1·η2·…"
     ],
-    "symbols": [],
-    "intuitiveDemo": "Rappresenta work and power con uno schema semplice e modifica una variabile alla volta.",
+    "symbols": [
+      "P: potenza [W]",
+      "L: lavoro [J]",
+      "M: coppia [N·m]",
+      "ω: velocità angolare [rad/s]",
+      "n: giri al minuto [rpm]",
+      "η: rendimento"
+    ],
+    "intuitiveDemo": [
+      "Sollevare lo stesso peso in metà tempo richiede il doppio della potenza media.",
+      "Un riduttore diminuisce la velocità e aumenta la coppia, al netto delle perdite."
+    ],
     "numericExamples": [
-      {
-        "title": "Esempio di impostazione",
-        "data": "Definire dati e unità per un caso su Work and power.",
-        "solution": "Dichiarare ipotesi, applicare il modello, verificare unità e interpretare il risultato."
-      }
+      "6000 J in 3 s: P=2000 W.",
+      "M=50 N·m a 1200 rpm: ω≈125,7 rad/s, P≈6,28 kW.",
+      "Motore assorbe 10 kW e rende 8,5 kW: η=85%."
     ],
     "industrialExamples": [
-      "Riconoscere Work and power in una macchina, impianto, ciclo produttivo o documento tecnico.",
-      "Valutare effetto su prestazione, qualità, sicurezza, energia e manutenzione."
+      "Scelta di un motore per nastro trasportatore.",
+      "Potenza all’albero di pompe e compressori.",
+      "Bilancio energetico di un riduttore."
     ],
     "practicalExamples": [
-      "Disegnare uno schema funzionale con ingressi, trasformazione e uscite.",
-      "Preparare una procedura di verifica indicando strumento, unità, tolleranza e criterio di accettazione."
+      "Distinguere potenza nominale, assorbita e utile.",
+      "Convertire rpm in rad/s.",
+      "Non usare il rendimento come percentuale dentro la formula senza dividerlo per cento."
     ],
     "crossLinks": [
-      "math",
-      "english"
+      "Elettrotecnica: potenza elettrica.",
+      "Macchine: coppia e curve motore.",
+      "Energia: perdite e bilanci."
     ],
     "commonErrors": [
-      "Usare una formula senza dichiarare unità e ipotesi.",
-      "Confondere componente, funzione e grandezza misurata.",
-      "Trascurare protezioni, energia residua o limiti del modello."
+      "Confondere energia e potenza.",
+      "Usare rpm direttamente in P=Mω.",
+      "Ottenere rendimento superiore a uno senza verificare dati e confini del sistema."
     ],
     "keywords": [
-      "work",
-      "and",
-      "power"
+      "potenza",
+      "watt",
+      "coppia",
+      "velocità angolare",
+      "rendimento",
+      "perdite"
     ],
-    "summary": "Work and power: funzione, principio, grandezze, modello, verifica, applicazione e sicurezza.",
+    "summary": "La potenza è energia per unità di tempo. In traslazione P=Fv, in rotazione P=Mω. Il rendimento confronta potenza utile e assorbita e permette di quantificare le perdite.",
     "selfCheck": [
-      "Qual è la funzione di Work and power?",
-      "Quali dati e unità servono per verificarlo?",
-      "Quale guasto o errore operativo è più probabile?"
+      "Qual è la differenza tra joule e watt?",
+      "Come converti rpm in rad/s?",
+      "Perché il rendimento reale è minore di uno?"
     ],
     "guidedExercises": [
-      {
-        "prompt": "Costruisci uno schema di analisi per Work and power.",
-        "hint": "Elenca dati, incognite, ipotesi, relazioni e verifica.",
-        "solution": "Schema minimo: sistema → dati → modello → calcolo/argomentazione → controllo → conclusione."
-      }
+      "Motore: M=80 N·m, n=1500 rpm. P≈12,57 kW. Con η=0,90, potenza assorbita≈13,96 kW."
     ],
     "autonomousExercises": [
-      {
-        "prompt": "Trova un esempio reale di Work and power e descrivilo in 8-12 righe.",
-        "solution": "La risposta deve collegare fenomeno, componenti, grandezze, rischi e controllo."
-      }
+      "Una macchina compie 45 kJ in 15 s con rendimento 75%. Calcola potenza utile e potenza assorbita."
     ],
     "solutions": [
-      "Usare il procedimento esplicitato negli esercizi e motivare ogni passaggio."
+      "P_u=3 kW; P_a=4 kW."
     ],
     "approfondimenti": [
-      "Collegamento tra work and power e sicurezza, qualità o manutenzione."
+      "Curve coppia-potenza.",
+      "Rendimento globale di una catena energetica.",
+      "Videolezione originale MechLab disponibile offline."
     ],
     "sourceRefs": [
       {
@@ -36872,87 +37046,101 @@
     ],
     "status": "COMPLETE",
     "sortOrder": 15,
-    "contentVersion": 1
+    "contentVersion": 2
   },
   {
     "id": "lesson_mechanics_016",
     "subjectId": "mechanics",
     "year": 3,
-    "macroarea": "Fondamenti e linguaggio tecnico",
-    "module": "Kinetic and potential energy",
-    "chapter": "Concetti fondamentali",
-    "title": "Fondamenti di Kinetic and potential energy",
-    "durationMinutes": 35,
-    "difficulty": "BASE",
+    "macroarea": "Dinamica ed energia",
+    "module": "Lavoro ed energia",
+    "chapter": "Teorema dell’energia cinetica",
+    "title": "Lavoro, energia cinetica e potenziale",
+    "durationMinutes": 90,
+    "difficulty": "INTERMEDIA",
     "prerequisites": [
-      "Conoscenze di base collegate a kinetic and potential energy"
+      "Vettori",
+      "Forza e spostamento",
+      "Trigonometria di base"
     ],
     "objectives": [
-      "Spiegare il principio di funzionamento di Kinetic and potential energy.",
-      "Identificare grandezze, componenti, ingressi, uscite e vincoli.",
-      "Applicare una procedura con controlli, sicurezza e interpretazione industriale."
+      "Calcolare il lavoro di una forza costante.",
+      "Distinguere lavoro positivo, negativo e nullo.",
+      "Calcolare energia cinetica e potenziale.",
+      "Applicare il teorema dell’energia cinetica e la conservazione dell’energia."
     ],
-    "introduction": "La lezione affronta **Kinetic and potential energy** nell'area meccanica ed energia, collegando principio, rappresentazione, calcolo, applicazione e manutenzione.",
-    "explanation": "Lo studio di Kinetic and potential energy parte dal sistema reale: funzione richiesta, confini, ingressi, uscite e condizioni operative. Si individuano quindi componenti e grandezze misurabili, con simboli e unità coerenti. Il modello serve a prevedere il comportamento, ma deve dichiarare semplificazioni e limiti. La procedura tecnica segue una sequenza controllabile: raccolta dati, scelta del modello o dello schema, calcolo o simulazione, verifica, interpretazione e documentazione. In industria il risultato va confrontato con tolleranze, prestazioni, sicurezza, manutenzione, qualità ed efficienza. Prima di agire su una macchina si applicano isolamento delle energie, DPI, istruzioni del costruttore e norme pertinenti. Una scheda finale dovrebbe riportare dati, ipotesi, passaggi, risultato, rischio residuo e controllo effettuato.",
+    "introduction": "Forze e movimento possono essere studiati anche attraverso l’energia. Questo punto di vista consente di collegare direttamente stato iniziale e finale, spesso evitando di calcolare ogni istante del moto.",
+    "explanation": "Il lavoro di una forza costante è L=F s cos α, dove α è l’angolo tra forza e spostamento. È positivo se la forza favorisce il moto, negativo se lo ostacola e nullo se è perpendicolare allo spostamento. L’energia cinetica Ec=1/2 m v² dipende dal quadrato della velocità. L’energia potenziale gravitazionale Ep=mgh dipende dalla quota rispetto a un riferimento. Il teorema dell’energia cinetica afferma che il lavoro della risultante è uguale alla variazione di Ec. Se agiscono solo forze conservative, l’energia meccanica Ec+Ep si conserva; attrito e altre dissipazioni trasformano parte dell’energia meccanica in calore o altre forme.",
     "formulas": [
-      "Eₚ = m·g·h"
+      "L = F·s·cos α",
+      "Ec = ½m v²",
+      "Ep = mgh",
+      "L_R = ΔEc",
+      "Ec1 + Ep1 = Ec2 + Ep2 senza dissipazioni"
     ],
-    "symbols": [],
-    "intuitiveDemo": "Rappresenta kinetic and potential energy con uno schema semplice e modifica una variabile alla volta.",
+    "symbols": [
+      "L: lavoro [J]",
+      "s: spostamento [m]",
+      "Ec: energia cinetica [J]",
+      "Ep: energia potenziale [J]",
+      "g≈9,81 m/s²"
+    ],
+    "intuitiveDemo": [
+      "Spingere una parete immobile non produce lavoro meccanico sul muro perché lo spostamento è zero.",
+      "Raddoppiare la velocità quadruplica l’energia cinetica."
+    ],
     "numericExamples": [
-      {
-        "title": "Esempio di impostazione",
-        "data": "Definire dati e unità per un caso su Kinetic and potential energy.",
-        "solution": "Dichiarare ipotesi, applicare il modello, verificare unità e interpretare il risultato."
-      }
+      "F=100 N, s=5 m, α=60°: L=250 J.",
+      "m=20 kg, v=3 m/s: Ec=90 J.",
+      "m=10 kg sollevata di 2 m: Ep≈196,2 J."
     ],
     "industrialExamples": [
-      "Riconoscere Kinetic and potential energy in una macchina, impianto, ciclo produttivo o documento tecnico.",
-      "Valutare effetto su prestazione, qualità, sicurezza, energia e manutenzione."
+      "Frenata e dissipazione dell’energia cinetica.",
+      "Accumulo di energia in volani.",
+      "Sollevamento con argani e carriponte."
     ],
     "practicalExamples": [
-      "Disegnare uno schema funzionale con ingressi, trasformazione e uscite.",
-      "Preparare una procedura di verifica indicando strumento, unità, tolleranza e criterio di accettazione."
+      "Disegnare l’angolo tra forza e spostamento.",
+      "Definire il livello zero dell’energia potenziale.",
+      "Includere le perdite nel bilancio reale."
     ],
     "crossLinks": [
-      "math",
-      "english"
+      "Matematica: prodotto scalare.",
+      "Macchine: volani e frenatura.",
+      "Termodinamica: trasformazione dell’energia."
     ],
     "commonErrors": [
-      "Usare una formula senza dichiarare unità e ipotesi.",
-      "Confondere componente, funzione e grandezza misurata.",
-      "Trascurare protezioni, energia residua o limiti del modello."
+      "Usare l’angolo rispetto all’orizzontale invece dell’angolo forza-spostamento.",
+      "Dimenticare il quadrato della velocità.",
+      "Applicare conservazione dell’energia meccanica in presenza di attrito senza contabilizzare le perdite."
     ],
     "keywords": [
-      "kinetic",
-      "and",
-      "potential",
-      "energy"
+      "lavoro",
+      "energia cinetica",
+      "energia potenziale",
+      "joule",
+      "conservazione",
+      "dissipazione"
     ],
-    "summary": "Kinetic and potential energy: funzione, principio, grandezze, modello, verifica, applicazione e sicurezza.",
+    "summary": "Il lavoro trasferisce energia: L=Fs cosα. L’energia cinetica vale 1/2mv² e quella potenziale mgh. Il lavoro risultante modifica Ec; senza dissipazioni l’energia meccanica si conserva.",
     "selfCheck": [
-      "Qual è la funzione di Kinetic and potential energy?",
-      "Quali dati e unità servono per verificarlo?",
-      "Quale guasto o errore operativo è più probabile?"
+      "Quando il lavoro è nullo?",
+      "Che cosa accade a Ec se raddoppia v?",
+      "Quando si può usare la conservazione dell’energia meccanica?"
     ],
     "guidedExercises": [
-      {
-        "prompt": "Costruisci uno schema di analisi per Kinetic and potential energy.",
-        "hint": "Elenca dati, incognite, ipotesi, relazioni e verifica.",
-        "solution": "Schema minimo: sistema → dati → modello → calcolo/argomentazione → controllo → conclusione."
-      }
+      "Un blocco da 5 kg passa da 2 a 6 m/s: ΔEc=½·5·(36-4)=80 J, uguale al lavoro risultante."
     ],
     "autonomousExercises": [
-      {
-        "prompt": "Trova un esempio reale di Kinetic and potential energy e descrivilo in 8-12 righe.",
-        "solution": "La risposta deve collegare fenomeno, componenti, grandezze, rischi e controllo."
-      }
+      "Un corpo da 8 kg cade di 3 m senza attrito. Calcola la velocità finale partendo da fermo."
     ],
     "solutions": [
-      "Usare il procedimento esplicitato negli esercizi e motivare ogni passaggio."
+      "mgh=½mv²; v=√(2gh)≈7,67 m/s."
     ],
     "approfondimenti": [
-      "Collegamento tra kinetic and potential energy e sicurezza, qualità o manutenzione."
+      "Forze conservative e potenziale elastico.",
+      "Bilanci energetici con rendimento.",
+      "Videolezione originale MechLab disponibile offline."
     ],
     "sourceRefs": [
       {
@@ -36966,7 +37154,7 @@
     ],
     "status": "COMPLETE",
     "sortOrder": 16,
-    "contentVersion": 1
+    "contentVersion": 2
   },
   {
     "id": "lesson_mechanics_017",

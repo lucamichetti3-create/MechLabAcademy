@@ -1,0 +1,49 @@
+{
+  "slug": "vincoli_reazioni",
+  "title": "Vincoli e reazioni vincolari",
+  "module": "Meccanica — Terzo anno",
+  "lessonId": "lesson_mechanics_006",
+  "topic": "Vincoli",
+  "outputName": "mechlab_vincoli_reazioni.mp4",
+  "language": "it",
+  "voiceSpeed": 148,
+  "voicePitch": 45,
+  "scenes": [
+    {
+      "title": "Vincoli e reazioni",
+      "body": "Un vincolo impedisce alcuni movimenti e genera reazioni.",
+      "voice": "Un vincolo limita i gradi di libertà di un corpo. Ogni movimento impedito corrisponde, nel modello ideale, a una possibile reazione vincolare.",
+      "kind": "intro"
+    },
+    {
+      "title": "1. Carrello",
+      "body": "Impedisce il moto normale al piano.\nGenera una sola reazione.",
+      "voice": "Il carrello ideale consente lo scorrimento lungo il piano e la rotazione, ma impedisce il moto normale. Per questo genera una sola reazione.",
+      "kind": "force"
+    },
+    {
+      "title": "2. Cerniera",
+      "body": "Impedisce due traslazioni.\nGenera Rx e Ry.\nConsente la rotazione.",
+      "voice": "La cerniera nel piano impedisce le due traslazioni e genera due componenti di reazione, ma lascia libera la rotazione.",
+      "kind": "formula"
+    },
+    {
+      "title": "3. Incastro",
+      "body": "Impedisce traslazioni e rotazione.\nGenera Rx, Ry e M.",
+      "voice": "L’incastro blocca tutte le possibilità di movimento nel piano. Può quindi trasmettere due forze di reazione e un momento.",
+      "kind": "balance"
+    },
+    {
+      "title": "4. Modellare bene",
+      "body": "Il simbolo del vincolo decide le incognite.\nUn modello sbagliato produce calcoli inutili.",
+      "voice": "La scelta del vincolo non è un dettaglio grafico. Determina le incognite e quindi le equazioni disponibili. Modella ciò che il collegamento reale può effettivamente trasmettere.",
+      "kind": "example"
+    },
+    {
+      "title": "Riepilogo",
+      "body": "Carrello: 1 reazione\nCerniera: 2 reazioni\nIncastro: 2 reazioni + momento",
+      "voice": "Ricapitoliamo. Conta i movimenti impediti e traduci il vincolo nelle reazioni corrette. Questo è il primo passo per risolvere travi e strutture semplici.",
+      "kind": "recap"
+    }
+  ]
+}

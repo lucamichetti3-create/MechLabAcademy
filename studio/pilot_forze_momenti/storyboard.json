@@ -1,0 +1,53 @@
+{
+  "slug": "forze_momenti",
+  "title": "Forze, momenti e leve",
+  "module": "Statica",
+  "outputName": "mechlab_forze_momenti.mp4",
+  "language": "it",
+  "voiceSpeed": 148,
+  "voicePitch": 45,
+  "scenes": [
+    {
+      "title": "Forze, momenti e leve",
+      "body": "Perché una chiave più lunga rende più facile svitare un bullone?\nLa risposta è nel momento di una forza.",
+      "voice": "Perché una chiave più lunga rende più facile svitare un bullone? La risposta è nel momento di una forza. In questa lezione vedremo che cosa rappresenta, come si calcola e come si usa nella pratica.",
+      "kind": "intro"
+    },
+    {
+      "title": "1. La forza non basta",
+      "body": "Una forza ha:\n• intensità\n• direzione\n• verso\n• punto di applicazione",
+      "voice": "Una forza non è descritta soltanto dal suo valore. Servono intensità, direzione, verso e punto di applicazione. Spostando il punto in cui agisce, l'effetto sul corpo può cambiare completamente.",
+      "kind": "force"
+    },
+    {
+      "title": "2. Il momento",
+      "body": "M = F · b\n\nF = forza [N]\nb = braccio perpendicolare [m]\nM = momento [N·m]",
+      "voice": "Il momento rispetto a un punto si calcola moltiplicando la forza per il braccio perpendicolare. La formula è emme uguale effe per bi. La forza si misura in newton, il braccio in metri e il momento in newton metro.",
+      "kind": "formula"
+    },
+    {
+      "title": "3. Perché la leva funziona",
+      "body": "Stessa forza, braccio maggiore → momento maggiore\n\nUna chiave lunga aumenta b, non F.",
+      "voice": "A parità di forza, aumentando il braccio aumenta il momento. Una chiave più lunga non rende più forte la tua mano: aumenta la distanza tra la forza e l'asse del bullone, quindi aumenta l'effetto rotatorio.",
+      "kind": "lever"
+    },
+    {
+      "title": "4. Esempio numerico",
+      "body": "F = 200 N\nb = 0,30 m\n\nM = 200 · 0,30 = 60 N·m",
+      "voice": "Esempio. Applichiamo duecento newton a trenta centimetri dall'asse. Convertiamo trenta centimetri in zero virgola trenta metri. Il momento vale duecento per zero virgola trenta, cioè sessanta newton metro.",
+      "kind": "example"
+    },
+    {
+      "title": "5. Equilibrio",
+      "body": "Un corpo è in equilibrio rotazionale quando:\n\nΣM = 0\n\nMomenti orari e antiorari si compensano.",
+      "voice": "Per avere equilibrio rotazionale, la somma algebrica dei momenti deve essere zero. I momenti che tendono a ruotare in senso orario devono essere compensati da quelli in senso antiorario.",
+      "kind": "balance"
+    },
+    {
+      "title": "Riepilogo tecnico",
+      "body": "• Il punto di applicazione conta\n• M = F · b\n• Il braccio è perpendicolare\n• Unità: N·m\n• In equilibrio: ΣM = 0",
+      "voice": "Ricapitoliamo. Il punto di applicazione della forza conta. Il momento è forza per braccio perpendicolare. Si misura in newton metro. Aumentando il braccio aumenta l'effetto rotatorio. In equilibrio, la somma dei momenti è zero. Ora prova il quiz collegato nella lezione MechLab.",
+      "kind": "recap"
+    }
+  ]
+}

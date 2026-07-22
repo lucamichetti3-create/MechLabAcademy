@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:06,980
+L’attrito è una forza tangenziale che si oppone al moto relativo, o alla tendenza al moto,
+
+2
+00:00:06,980 --> 00:00:09,229
+tra due superfici a contatto.
+
+3
+00:00:09,229 --> 00:00:15,806
+Nel modello scolastico di Coulomb, l’attrito dipende dalla reazione normale tra le superfici
+
+4
+00:00:15,806 --> 00:00:17,950
+e dal coefficiente di attrito.
+
+5
+00:00:17,950 --> 00:00:22,025
+Non dipende direttamente dall’area apparente di contatto.
+
+6
+00:00:22,025 --> 00:00:25,435
+L’attrito statico non vale sempre mu per enne.
+
+7
+00:00:25,435 --> 00:00:31,663
+Si adatta alla forza applicata fino a un massimo pari al coefficiente statico per la
+
+8
+00:00:31,663 --> 00:00:32,923
+reazione normale.
+
+9
+00:00:32,923 --> 00:00:39,722
+Quando il corpo scivola, usiamo l’attrito dinamico, spesso minore del valore limite statico.
+
+10
+00:00:39,722 --> 00:00:45,117
+Il passaggio da fermo a movimento richiede quindi particolare attenzione.
+
+11
+00:00:45,117 --> 00:00:52,307
+L’attrito è fondamentale in freni, frizioni, trasmissioni a cinghia, pneumatici e serraggi.
+
+12
+00:00:52,307 --> 00:00:57,364
+Può essere utile oppure causare usura e dissipazione di energia.
+
+13
+00:00:57,364 --> 00:00:58,442
+Ricapitoliamo.
+
+14
+00:00:58,442 --> 00:01:02,138
+Distingui sempre tra attrito statico e dinamico.
+
+15
+00:01:02,138 --> 00:01:08,837
+Identifica la reazione normale e verifica prima se il corpo resta fermo oppure scivola.

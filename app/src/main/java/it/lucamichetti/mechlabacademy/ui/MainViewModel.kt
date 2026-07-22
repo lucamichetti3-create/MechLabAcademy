@@ -8,6 +8,7 @@ import it.lucamichetti.mechlabacademy.data.local.NoteEntity
 import it.lucamichetti.mechlabacademy.data.local.QuizQuestionEntity
 import it.lucamichetti.mechlabacademy.data.local.VideoEntity
 import it.lucamichetti.mechlabacademy.data.preferences.AppSettings
+import it.lucamichetti.mechlabacademy.data.repository.StudySession
 import it.lucamichetti.mechlabacademy.domain.ProgressCalculator
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -29,6 +30,10 @@ data class HomeState(
     val studiedSeconds: Long = 0,
     val streak: Int = 0,
     val latestLessonId: String? = null,
+    val videosWatched: Int = 0,
+    val videoTotal: Int = 0,
+    val dueFlashcards: Int = 0,
+    val exercisesDone: Int = 0,
 )
 
 class MainViewModel(app: Application) : AndroidViewModel(app) {
@@ -44,7 +49,13 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     private val _seed = MutableStateFlow(SeedState())
     val seed = _seed.asStateFlow()
 
-    val home = combine(repo.allProgress, repo.subjects) { progress, _ ->
+    val home = combine(
+        repo.allProgress,
+        repo.videos,
+        repo.flashcardProgress,
+        repo.exerciseProgress,
+        repo.subjects,
+    ) { progress, videos, flashcards, exercises, _ ->
         val completed = progress.count { it.completed }
         val summary = ProgressCalculator.calculate(
             total = TOTAL_LESSONS,
@@ -55,6 +66,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                 .map { it.lastOpenedAt / MILLIS_PER_DAY }
                 .toSet(),
         )
+        val now = System.currentTimeMillis()
         HomeState(
             total = summary.total,
             completed = summary.completed,
@@ -62,11 +74,28 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
             studiedSeconds = summary.studiedSeconds,
             streak = summary.streak,
             latestLessonId = progress.maxByOrNull { it.lastOpenedAt }?.lessonId,
+            videosWatched = videos.count { it.watched },
+            videoTotal = videos.size,
+            dueFlashcards = flashcards.count { it.dueAt == 0L || it.dueAt <= now },
+            exercisesDone = exercises.count { it.completed },
         )
     }.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5_000),
         initialValue = HomeState(),
+    )
+
+
+    val studySession = combine(settings, seed) { appSettings, seedState ->
+        if (seedState.loading || seedState.error != null) {
+            null
+        } else {
+            repo.buildStudySession(appSettings.selectedYear)
+        }
+    }.stateIn(
+        scope = viewModelScope,
+        started = SharingStarted.WhileSubscribed(5_000),
+        initialValue = null,
     )
 
     init {
@@ -97,6 +126,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun openLesson(id: String) = viewModelScope.launch { repo.openLesson(id) }
+    fun addStudySeconds(id: String, seconds: Long) = viewModelScope.launch { repo.addStudySeconds(id, seconds) }
     fun complete(id: String, value: Boolean) = viewModelScope.launch { repo.setCompleted(id, value) }
     fun favorite(id: String, value: Boolean) = viewModelScope.launch { repo.setFavorite(id, value) }
     fun saveLessonNotes(id: String, text: String) = viewModelScope.launch { repo.saveLessonNotes(id, text) }

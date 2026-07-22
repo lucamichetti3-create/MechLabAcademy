@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:06,200
+In meccanica il lavoro rappresenta il trasferimento di energia dovuto a una forza che
+
+2
+00:00:06,200 --> 00:00:07,951
+provoca uno spostamento.
+
+3
+00:00:07,951 --> 00:00:11,671
+Non coincide semplicemente con la fatica percepita.
+
+4
+00:00:11,671 --> 00:00:18,716
+Il lavoro di una forza costante è forza per spostamento per il coseno dell’angolo tra loro.
+
+5
+00:00:18,716 --> 00:00:20,187
+Si misura in joule.
+
+6
+00:00:20,187 --> 00:00:24,909
+Se forza e spostamento sono perpendicolari, il lavoro è zero.
+
+7
+00:00:24,909 --> 00:00:29,971
+L’energia cinetica dipende dalla massa e dal quadrato della velocità.
+
+8
+00:00:29,971 --> 00:00:34,886
+Raddoppiare la velocità significa quadruplicare l’energia cinetica.
+
+9
+00:00:34,886 --> 00:00:41,229
+L’energia potenziale gravitazionale dipende da massa, accelerazione di gravità e quota
+
+10
+00:00:41,229 --> 00:00:43,663
+rispetto a un riferimento scelto.
+
+11
+00:00:43,663 --> 00:00:49,907
+Il lavoro della risultante delle forze è uguale alla variazione dell’energia cinetica.
+
+12
+00:00:49,907 --> 00:00:56,587
+Questa relazione permette spesso di risolvere problemi senza studiare ogni istante del moto.
+
+13
+00:00:56,587 --> 00:00:57,674
+Ricapitoliamo.
+
+14
+00:00:57,674 --> 00:01:04,660
+Il lavoro collega forze e spostamenti, mentre energia cinetica e potenziale descrivono due
+
+15
+00:01:04,660 --> 00:01:06,755
+forme di energia meccanica.

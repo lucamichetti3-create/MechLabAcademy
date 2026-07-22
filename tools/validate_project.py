@@ -18,6 +18,13 @@ required = [
     "app/src/main/AndroidManifest.xml",
     ".github/workflows/android.yml",
     "tools/validate_dataset.py",
+    "tools/build_portal_catalog.py",
+    "tools/mechlab_studio/generate_pilot.py",
+    "portal/index.html",
+    "portal/app.js",
+    "portal/sw.js",
+    "ECOSYSTEM_2.0.md",
+    "VIDEO_STUDIO.md",
 ]
 for relative in required:
     if not (ROOT / relative).is_file():
@@ -31,7 +38,7 @@ if "org.jetbrains.kotlin.android" in root_gradle + app_gradle:
     errors.append("AGP 9 built-in Kotlin: org.jetbrains.kotlin.android must not be applied")
 if 'id("com.android.application") version "9.3.0"' not in root_gradle:
     errors.append("AGP 9.3.0 not configured")
-for key, expected in {"compileSdk": "37", "targetSdk": "37", "minSdk": "23"}.items():
+for key, expected in {"compileSdk": "37", "targetSdk": "36", "minSdk": "23"}.items():
     if versions.get(key) != expected:
         errors.append(f"{key} expected {expected}, found {versions.get(key)}")
 if versions.get("room") != "2.8.4":
@@ -40,6 +47,10 @@ if versions.get("navigation") != "2.9.8":
     errors.append("Navigation version mismatch")
 if versions.get("work") != "2.11.2":
     errors.append("WorkManager version mismatch")
+if versions.get("media3") != "1.10.1":
+    errors.append("Media3 version mismatch")
+if 'versionName = "2.0.0"' not in app_gradle:
+    errors.append("App versionName 2.0.0 not configured")
 
 all_text = "\n".join(
     path.read_text(encoding="utf-8", errors="ignore")
@@ -58,12 +69,23 @@ for path in (ROOT / "app/src/main/java").rglob("*.kt"):
         errors.append(f"unbalanced braces in {path.relative_to(ROOT)}")
 
 routes = (ROOT / "app/src/main/java/it/lucamichetti/mechlabacademy/ui/Routes.kt").read_text(encoding="utf-8")
-for route in ["HOME", "SUBJECTS", "PLAN", "EXERCISES", "PROFILE", "SEARCH", "VIDEOS", "MAPS", "FLASHCARDS", "LABS", "GLOSSARY", "NOTES", "TOOLS", "QUIZ"]:
+for route in ["HOME", "SUBJECTS", "PLAN", "EXERCISES", "PROFILE", "SEARCH", "VIDEOS", "MAPS", "FLASHCARDS", "LABS", "GLOSSARY", "NOTES", "TOOLS", "QUIZ", "TODAY", "SIMULATORS"]:
     if f"const val {route}" not in routes:
         errors.append(f"missing route {route}")
+
+raw_dir = ROOT / "app/src/main/res/raw"
+local_videos = sorted(raw_dir.glob("mechlab_*.mp4"))
+if len(local_videos) < 10:
+    errors.append(f"expected at least 10 local MechLab videos, found {len(local_videos)}")
+for video in local_videos:
+    if video.stat().st_size < 100_000:
+        errors.append(f"local video too small or corrupt: {video.name}")
+    portal_copy = ROOT / "portal/media" / video.name
+    if not portal_copy.is_file():
+        errors.append(f"missing portal copy for {video.name}")
 
 if errors:
     print("PROJECT VALIDATION ERRORS:", file=sys.stderr)
     print("\n".join(errors), file=sys.stderr)
     sys.exit(1)
-print("Project structure, versions, packages, routes, placeholders and source delimiters: OK")
+print("Project structure, versions, packages, routes, ecosystem, video assets and portal copies: OK")

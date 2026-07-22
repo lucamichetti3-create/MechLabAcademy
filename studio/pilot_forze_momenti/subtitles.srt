@@ -1,0 +1,107 @@
+1
+00:00:00,000 --> 00:00:04,726
+Perché una chiave più lunga rende più facile svitare un bullone?
+
+2
+00:00:04,726 --> 00:00:07,607
+La risposta è nel momento di una forza.
+
+3
+00:00:07,607 --> 00:00:14,401
+In questa lezione vedremo che cosa rappresenta, come si calcola e come si usa nella pratica.
+
+4
+00:00:14,401 --> 00:00:18,329
+Una forza non è descritta soltanto dal suo valore.
+
+5
+00:00:18,329 --> 00:00:23,043
+Servono intensità, direzione, verso e punto di applicazione.
+
+6
+00:00:23,043 --> 00:00:29,407
+Spostando il punto in cui agisce, l'effetto sul corpo può cambiare completamente.
+
+7
+00:00:29,407 --> 00:00:35,226
+Il momento rispetto a un punto si calcola moltiplicando la forza per il braccio
+
+8
+00:00:35,226 --> 00:00:36,331
+perpendicolare.
+
+9
+00:00:36,331 --> 00:00:39,056
+La formula è emme uguale effe per bi.
+
+10
+00:00:39,056 --> 00:00:44,876
+La forza si misura in newton, il braccio in metri e il momento in newton metro.
+
+11
+00:00:44,876 --> 00:00:49,201
+A parità di forza, aumentando il braccio aumenta il momento.
+
+12
+00:00:49,201 --> 00:00:53,022
+Una chiave più lunga non rende più forte la tua mano:
+
+13
+00:00:53,022 --> 00:00:59,510
+aumenta la distanza tra la forza e l'asse del bullone, quindi aumenta l'effetto rotatorio.
+
+14
+00:00:59,510 --> 00:01:00,120
+Esempio.
+
+15
+00:01:00,120 --> 00:01:04,546
+Applichiamo duecento newton a trenta centimetri dall'asse.
+
+16
+00:01:04,546 --> 00:01:09,049
+Convertiamo trenta centimetri in zero virgola trenta metri.
+
+17
+00:01:09,049 --> 00:01:14,925
+Il momento vale duecento per zero virgola trenta, cioè sessanta newton metro.
+
+18
+00:01:14,925 --> 00:01:20,864
+Per avere equilibrio rotazionale, la somma algebrica dei momenti deve essere zero.
+
+19
+00:01:20,864 --> 00:01:27,455
+I momenti che tendono a ruotare in senso orario devono essere compensati da quelli in senso
+
+20
+00:01:27,455 --> 00:01:28,251
+antiorario.
+
+21
+00:01:28,251 --> 00:01:29,372
+Ricapitoliamo.
+
+22
+00:01:29,372 --> 00:01:32,813
+Il punto di applicazione della forza conta.
+
+23
+00:01:32,813 --> 00:01:36,494
+Il momento è forza per braccio perpendicolare.
+
+24
+00:01:36,494 --> 00:01:38,574
+Si misura in newton metro.
+
+25
+00:01:38,574 --> 00:01:42,576
+Aumentando il braccio aumenta l'effetto rotatorio.
+
+26
+00:01:42,576 --> 00:01:46,016
+In equilibrio, la somma dei momenti è zero.
+
+27
+00:01:46,016 --> 00:01:50,018
+Ora prova il quiz collegato nella lezione MechLab.

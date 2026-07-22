@@ -1,0 +1,49 @@
+{
+  "slug": "moto_rettilineo",
+  "title": "Moto rettilineo uniforme",
+  "module": "Meccanica — Terzo anno",
+  "lessonId": "lesson_mechanics_010",
+  "topic": "Cinematica",
+  "outputName": "mechlab_moto_rettilineo.mp4",
+  "language": "it",
+  "voiceSpeed": 148,
+  "voicePitch": 45,
+  "scenes": [
+    {
+      "title": "Moto rettilineo uniforme",
+      "body": "Traiettoria rettilinea e velocità costante.",
+      "voice": "Nel moto rettilineo uniforme il punto si muove lungo una retta con velocità costante. L’accelerazione è zero.",
+      "kind": "intro"
+    },
+    {
+      "title": "1. Legge oraria",
+      "body": "s = s₀ + v · t",
+      "voice": "La posizione a un certo istante si ottiene sommando alla posizione iniziale il prodotto tra velocità e tempo. Questa è la legge oraria del moto uniforme.",
+      "kind": "formula"
+    },
+    {
+      "title": "2. Unità coerenti",
+      "body": "m, s, m/s\n1 m/s = 3,6 km/h",
+      "voice": "Prima di calcolare, rendi coerenti le unità. Per passare da metri al secondo a chilometri orari si moltiplica per tre virgola sei.",
+      "kind": "example"
+    },
+    {
+      "title": "3. Grafico spazio-tempo",
+      "body": "La pendenza della retta è la velocità.\nPiù è inclinata, maggiore è |v|.",
+      "voice": "Nel grafico spazio tempo, il moto uniforme è una retta. La pendenza rappresenta la velocità: una pendenza negativa indica moto nel verso opposto.",
+      "kind": "lever"
+    },
+    {
+      "title": "4. Esempio",
+      "body": "v = 2 m/s, t = 15 s\nΔs = 30 m",
+      "voice": "Se un carrello viaggia a due metri al secondo per quindici secondi, percorre trenta metri. Il risultato deriva direttamente da velocità per tempo.",
+      "kind": "balance"
+    },
+    {
+      "title": "Riepilogo",
+      "body": "v costante\na = 0\ns = s₀ + vt",
+      "voice": "Ricapitoliamo. Nel moto rettilineo uniforme la velocità è costante, l’accelerazione è zero e il grafico spazio tempo è una retta.",
+      "kind": "recap"
+    }
+  ]
+}

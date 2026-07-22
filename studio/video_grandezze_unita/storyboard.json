@@ -1,0 +1,49 @@
+{
+  "slug": "grandezze_unita",
+  "title": "Grandezze fisiche e unità SI",
+  "module": "Meccanica — Terzo anno",
+  "lessonId": "lesson_mechanics_001",
+  "topic": "Grandezze e misure",
+  "outputName": "mechlab_grandezze_unita.mp4",
+  "language": "it",
+  "voiceSpeed": 148,
+  "voicePitch": 45,
+  "scenes": [
+    {
+      "title": "Grandezze fisiche e unità SI",
+      "body": "Misurare significa confrontare una grandezza con un’unità campione.\nSenza unità, un numero tecnico è incompleto.",
+      "voice": "In meccanica ogni calcolo parte da una misura. Misurare significa confrontare una grandezza con un’unità campione. Un numero senza unità è incompleto e può portare a errori anche gravi.",
+      "kind": "intro"
+    },
+    {
+      "title": "1. Grandezze fondamentali",
+      "body": "Lunghezza [m]\nMassa [kg]\nTempo [s]\nTemperatura [K]\nCorrente [A]",
+      "voice": "Nel Sistema Internazionale alcune grandezze sono fondamentali. Per il nostro percorso useremo soprattutto metro, chilogrammo, secondo, kelvin e ampere. Da queste ricaviamo molte grandezze derivate.",
+      "kind": "formula"
+    },
+    {
+      "title": "2. Grandezze derivate",
+      "body": "Velocità: m/s\nAccelerazione: m/s²\nForza: N = kg·m/s²\nPotenza: W = J/s",
+      "voice": "Velocità, accelerazione, forza e potenza sono grandezze derivate. Le loro unità si costruiscono combinando le unità fondamentali. Questo permette anche di controllare dimensionalmente una formula.",
+      "kind": "formula"
+    },
+    {
+      "title": "3. Prefissi e conversioni",
+      "body": "1 kN = 1000 N\n1 mm = 0,001 m\n1 MPa = 1 N/mm²",
+      "voice": "I prefissi evitano numeri troppo grandi o troppo piccoli. Kilo significa mille, milli un millesimo e mega un milione. In meccanica è molto utile ricordare che un megapascal equivale a un newton su millimetro quadrato.",
+      "kind": "example"
+    },
+    {
+      "title": "4. Controllo dimensionale",
+      "body": "Prima del risultato chiediti:\n• le unità sono coerenti?\n• ho convertito tutto?\n• l’ordine di grandezza è realistico?",
+      "voice": "Prima di accettare un risultato, verifica che tutte le unità siano coerenti, che le conversioni siano state eseguite e che l’ordine di grandezza sia realistico. È uno dei controlli più efficaci contro gli errori.",
+      "kind": "balance"
+    },
+    {
+      "title": "Riepilogo",
+      "body": "Numero + unità = misura\nUsa il SI\nConverti prima di calcolare\nControlla le dimensioni",
+      "voice": "Ricapitoliamo. Una misura è formata da valore e unità. Usa unità coerenti del Sistema Internazionale, converti i dati prima del calcolo e controlla sempre le dimensioni della formula.",
+      "kind": "recap"
+    }
+  ]
+}

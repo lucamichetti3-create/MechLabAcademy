@@ -1,29 +1,33 @@
-# MechLab Academy — Accademia Meccanica
+# MechLab Academy 2.0 — ecosistema di studio tecnico
 
-Applicazione Android nativa personale per preparare il **triennio dell’Istituto Tecnico Tecnologico, indirizzo Meccanica, Meccatronica ed Energia**.
+MechLab Academy è un progetto personale per studiare il triennio dell’Istituto Tecnico Tecnologico, indirizzo **Meccanica, Meccatronica ed Energia**. La versione 2.0 trasforma la prima app Android in un ecosistema composto da:
 
-> Stato del progetto: **sorgenti 1.0.0**. Il pacchetto contiene architettura Android, database locale, interfaccia Compose, dataset iniziale, documentazione, validatori e workflow CI. Nel container non erano disponibili Android SDK e Gradle completi: non viene quindi allegato un APK locale e non viene dichiarata una compilazione Android già riuscita. Vedere `BUILD_VERIFICATION.md`.
+1. **app Android nativa**, utilizzabile soprattutto offline;
+2. **Video Academy**, con player Media3, YouTube incorporato quando consentito e fonti esterne;
+3. **10 videolezioni originali offline**, con voce italiana e sottotitoli incorporati;
+4. **portale web/PWA**, installabile da browser, con catalogo, video, checklist, ricerca e laboratorio interattivo;
+5. **MechLab Studio**, pipeline locale che genera MP4, copione e sottotitoli da storyboard JSON;
+6. **dataset didattico separato dal codice**, aggiornabile senza perdere i progressi personali.
 
-## Funzioni principali
+> Stato della consegna: **sorgenti 2.0.0 validati staticamente**. La versione 1.0 è stata realmente compilata da GitHub Actions e installata su un dispositivo Android. Questa nuova versione 2.0 contiene dipendenze e codice aggiuntivi e deve essere ricompilata tramite il workflow incluso; nel container di generazione non era disponibile un ambiente Android completo, quindi non viene dichiarata una build 2.0 già riuscita. Vedere `BUILD_VERIFICATION.md`.
 
-- Kotlin, Jetpack Compose, Material 3, MVVM e Navigation Compose;
-- Room con importazione dei contenuti JSON al primo avvio;
-- DataStore per tema, anno, dimensione testo, ore settimanali e promemoria;
-- lezioni offline strutturate per anno → materia → macroarea → modulo → capitolo → lezione;
-- progressi, preferiti, appunti per lezione, quiz, esercizi e flashcard con ripetizione dilazionata;
-- video verificati aperti tramite URL ufficiale, senza download o redistribuzione;
-- mappe concettuali basate su nodi e archi;
-- laboratori virtuali guidati;
-- glossario tecnico bilingue;
-- strumenti tecnici, formulari e cronologia dei calcoli;
-- piano dimostrativo, statistiche di base e modalità “Studio di oggi”;
-- promemoria locale con WorkManager e gestione del permesso notifiche;
-- backup e ripristino tramite Storage Access Framework;
-- test JVM, test Room predisposti, validatori dataset e GitHub Actions.
+## Novità principali della 2.0
+
+- modalità **Studio di oggi**: teoria → video → esercizi → flashcard → quiz;
+- hub risorse dentro ogni lezione;
+- ricerca globale su lezioni, video, glossario, esercizi, laboratori e strumenti;
+- videolezioni locali riprodotte con AndroidX Media3;
+- video YouTube visualizzati in WebView con base URL e fallback alla fonte ufficiale;
+- stato video visto/preferito e filtri dedicati;
+- aggiornamento dei seed tramite `content_version`, preservando progressi, appunti e stato dei video;
+- card e griglie più adattive per ridurre sovrapposizioni sugli schermi piccoli;
+- primo percorso editoriale approfondito di Meccanica: grandezze, vettori, sistemi di forze, momenti, equilibrio, vincoli, attrito, moto uniforme, potenza e energia;
+- portale PWA con laboratorio grafico sul momento di una forza e backup locale dei progressi web;
+- pipeline ripetibile per produrre nuove videolezioni originali.
 
 ## Contenuti iniziali
 
-| Tipo | Quantità |
+| Contenuto | Quantità |
 |---|---:|
 | Materie | 12 |
 | Lezioni | 840 |
@@ -31,71 +35,100 @@ Applicazione Android nativa personale per preparare il **triennio dell’Istitut
 | Quiz | 2.200 |
 | Esercizi | 1.200 |
 | Flashcard | 2.100 |
-| Termini di glossario | 2.500 |
-| Mappe | 200 |
+| Glossario bilingue | 2.500 termini |
+| Mappe concettuali | 200 |
 | Laboratori/scenari | 200 |
-| Strumenti/formulari | 150 |
-| Video realmente verificati | 19 |
-| Attività di ricerca video ancora da svolgere | 1.000 |
+| Strumenti e formulari | 150 |
+| Video totali | 29 |
+| Videolezioni originali offline | 10 |
+| Risorse esterne verificate | 19 |
 
-I quantitativi e i collegamenti sono controllati da `tools/validate_dataset.py`. Lo script verifica anche l’assenza di duplicati esatti nei principali campi editoriali. `tools/enrich_seed.py` documenta il passaggio usato per rendere i seed iniziali coerenti con ciascuna disciplina, mantenendo stabili ID e relazioni.
+Le quantità e i riferimenti sono verificati da `tools/validate_dataset.py`.
 
-I contenuti costituiscono un **seed editoriale iniziale**. Le 330 lezioni marcate complete hanno struttura, spiegazione, esempi, domande e attività, ma molte sono ancora sintetiche e richiedono approfondimento e revisione progressiva. Non sono presentate come equivalenti a tre anni di manuali e didattica certificata.
+## Le 10 videolezioni offline incluse
+
+- Grandezze fisiche e unità SI;
+- Vettori e componenti;
+- Sistemi di forze e risultante;
+- Forze, momenti e leve;
+- Equilibrio statico;
+- Vincoli e reazioni vincolari;
+- Attrito statico e dinamico;
+- Moto rettilineo uniforme;
+- Potenza e rendimento;
+- Lavoro ed energia.
+
+I file MP4 sono in `app/src/main/res/raw/`. Copioni, storyboard e sottotitoli sono in `studio/`.
+
+## Aggiornamento dalla versione 1.0
+
+Le istruzioni complete per sostituire il progetto nel repository, compilare e installare la 2.0 senza disinstallare l’app sono in [`UPGRADE_FROM_1.0.md`](UPGRADE_FROM_1.0.md). Prima dell’aggiornamento è consigliato esportare un backup dall’app 1.0.
+
+## Compilazione dell’APK con GitHub Actions
+
+1. Sostituire nel repository GitHub il contenuto della versione precedente con quello di questa cartella, mantenendo la cartella nascosta `.git` se si usa GitHub Desktop.
+2. Eseguire commit e push sul ramo `main`.
+3. Aprire **Actions → Android CI**.
+4. Attendere che `validate-build` diventi verde.
+5. Aprire l’esecuzione e scaricare l’artifact **MechLabAcademy-debug-apk**.
+6. Estrarre `app-debug.apk` e installarlo sul telefono.
+
+Il workflow usa JDK 17, Gradle 9.5.0, Android API 37.0, Build Tools 37.0.0, test JVM, lint e `assembleDebug`.
 
 ## Apertura in Android Studio
 
-1. Installare una versione di Android Studio compatibile con AGP 9.3.
-2. Aprire la cartella `MechLabAcademy`.
-3. Selezionare JDK 17 per Gradle.
-4. Installare Android SDK Platform 37 e Build Tools 36.0.0.
-5. Attendere la sincronizzazione Gradle.
-6. Eseguire la configurazione `app` su emulatore o dispositivo Android 6.0 o successivo.
+- JDK: 17;
+- compileSdk: 37;
+- targetSdk: 36;
+- minSdk: 23;
+- package: `it.lucamichetti.mechlabacademy`;
+- versione: `2.0.0` (`versionCode 2`).
 
-Il progetto non include binari di terze parti. Il file `gradlew` incluso è un launcher testuale che delega a Gradle già installato; il JAR binario standard del Gradle Wrapper non è incluso. In alternativa usare `scripts/bootstrap-gradle.sh`, Android Studio o il workflow CI, che installa Gradle 9.5.0 tramite `gradle/actions/setup-gradle`.
-
-## Comandi
-
-```bash
-python tools/validate_project.py
-python tools/validate_dataset.py
-./scripts/bootstrap-gradle.sh
-./gradlew testDebugUnitTest
-./gradlew lintDebug
-./gradlew assembleDebug
-```
-
-APK atteso dopo una compilazione riuscita:
+APK atteso dopo la build:
 
 ```text
 app/build/outputs/apk/debug/app-debug.apk
 ```
 
-## Struttura
+## Avvio del portale web
 
-```text
-app/src/main/java/.../data       Room, repository, seed, backup e DataStore
-app/src/main/java/.../domain     logica pura, SRS e calcolatori
-app/src/main/java/.../ui         tema, navigazione, ViewModel e schermate Compose
-app/src/main/java/.../worker     promemoria WorkManager
-app/src/main/assets/seed         dataset JSON modificabile
-app/src/test                     test JVM
-app/src/androidTest              test Room su Android
-.github/workflows/android.yml    validazione, test, lint e APK CI
-tools/validate_dataset.py        integrità, quantità, duplicati e riferimenti
-tools/validate_project.py        struttura, versioni e controlli statici
-docs/reference                   riferimento visivo fornito dall’utente
+Non aprire direttamente `index.html` con doppio clic, perché browser e service worker richiedono un server locale.
+
+```bash
+cd portal
+python -m http.server 8080
 ```
 
-## Uso e limiti
+Aprire quindi `http://localhost:8080`. Il workflow `portal-pages.yml` permette anche una pubblicazione manuale su GitHub Pages dopo aver abilitato Pages nelle impostazioni del repository.
 
-MechLab Academy è uno strumento personale di preparazione. Non sostituisce iscrizione scolastica, docenti, laboratori, diploma, manuali aggiornati, norme tecniche o verifiche professionali. Per dimensionamenti e attività reali occorre usare norme applicabili, dati del produttore e responsabilità di un tecnico abilitato quando richiesta.
+## Rigenerare il catalogo del portale
 
-## Documentazione
+```bash
+python tools/build_portal_catalog.py
+```
 
-- `PROGRAMMA_FONTI.md`: ricostruzione del nucleo nazionale e fonti;
-- `CONTENT_GUIDE.md`: modifica e ampliamento dei contenuti;
-- `BUILD_VERIFICATION.md`: controlli realmente eseguiti e controlli rinviati alla CI;
-- `IMPLEMENTED_FEATURES.md`: matrice delle funzioni complete e parziali;
-- `LIMITS_AND_ROADMAP.md`: limiti reali e prossimi pacchetti;
-- `VALIDATION_REPORT.txt`: output dell’ultima validazione;
-- `FILE_MANIFEST.md` e `FILE_MANIFEST.json`: inventario con dimensioni e checksum.
+## Generare una videolezione con MechLab Studio
+
+```bash
+python tools/mechlab_studio/generate_pilot.py \
+  --storyboard studio/pilot_forze_momenti/storyboard.json
+```
+
+Requisiti locali: Python, Pillow, `espeak`, `ffmpeg` e `ffprobe`. Il generatore produce MP4 e sottotitoli SRT. Il formato degli storyboard è documentato in `VIDEO_STUDIO.md`.
+
+## Struttura essenziale
+
+```text
+app/                         app Android
+app/src/main/assets/seed/    contenuti JSON
+app/src/main/res/raw/        videolezioni offline
+portal/                      PWA complementare
+studio/                      storyboard, copioni e sottotitoli
+tools/mechlab_studio/        generatore video
+tools/                       validatori e generatori dati
+.github/workflows/           build APK e deploy portale
+```
+
+## Limiti dichiarati
+
+MechLab Academy non sostituisce scuola, docenti, laboratori reali, diploma, norme tecniche, manuali aggiornati o responsabilità professionali. Molte lezioni del catalogo restano seed editoriali sintetici; il primo percorso di Meccanica è stato approfondito, mentre il resto dovrà essere revisionato progressivamente. Il portale e l’app non sincronizzano ancora automaticamente i progressi tra dispositivi: ciascuno mantiene dati locali e backup separati.

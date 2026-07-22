@@ -37,9 +37,12 @@ import it.lucamichetti.mechlabacademy.ui.screens.PlanScreen
 import it.lucamichetti.mechlabacademy.ui.screens.ProfileScreen
 import it.lucamichetti.mechlabacademy.ui.screens.QuizScreen
 import it.lucamichetti.mechlabacademy.ui.screens.SearchScreen
+import it.lucamichetti.mechlabacademy.ui.screens.SimulatorsScreen
+import it.lucamichetti.mechlabacademy.ui.screens.StudyTodayScreen
 import it.lucamichetti.mechlabacademy.ui.screens.SubjectDetailScreen
 import it.lucamichetti.mechlabacademy.ui.screens.SubjectsScreen
 import it.lucamichetti.mechlabacademy.ui.screens.ToolsScreen
+import it.lucamichetti.mechlabacademy.ui.screens.VideoPlayerScreen
 import it.lucamichetti.mechlabacademy.ui.screens.VideosScreen
 import it.lucamichetti.mechlabacademy.ui.theme.MechLabTheme
 
@@ -106,7 +109,7 @@ private fun MainNavigation(vm: MainViewModel) {
             composable(Routes.EXERCISES) { ExercisesScreen(vm, navController) }
             composable(Routes.PROFILE) { ProfileScreen(vm, navController) }
             composable(Routes.SEARCH) { SearchScreen(vm, navController) }
-            composable(Routes.VIDEOS) { VideosScreen(vm) }
+            composable(Routes.VIDEOS) { VideosScreen(vm, navController) }
             composable(Routes.MAPS) { MapsScreen(vm, navController) }
             composable(Routes.FLASHCARDS) { FlashcardsScreen(vm) }
             composable(Routes.LABS) { LabsScreen(vm, navController) }
@@ -114,17 +117,35 @@ private fun MainNavigation(vm: MainViewModel) {
             composable(Routes.NOTES) { NotesScreen(vm) }
             composable(Routes.TOOLS) { ToolsScreen(vm) }
             composable(Routes.QUIZ) { QuizScreen(vm) }
+            composable(Routes.TODAY) { StudyTodayScreen(vm, navController) }
+            composable(Routes.SIMULATORS) { SimulatorsScreen(navController) }
+
             composable("subject/{id}") { entry ->
                 SubjectDetailScreen(vm, entry.arguments?.getString("id").orEmpty(), navController)
             }
             composable("lesson/{id}") { entry ->
-                LessonScreen(vm, entry.arguments?.getString("id").orEmpty())
+                LessonScreen(vm, entry.arguments?.getString("id").orEmpty(), navController)
             }
             composable("map/{id}") { entry ->
-                MapDetailScreen(vm, entry.arguments?.getString("id").orEmpty())
+                MapDetailScreen(vm, entry.arguments?.getString("id").orEmpty(), navController)
             }
             composable("lab/{id}") { entry ->
                 LabDetailScreen(vm, entry.arguments?.getString("id").orEmpty())
+            }
+            composable("video/{id}") { entry ->
+                VideoPlayerScreen(vm, entry.arguments?.getString("id").orEmpty(), navController)
+            }
+            composable("lesson-videos/{id}") { entry ->
+                VideosScreen(vm, navController, entry.arguments?.getString("id").orEmpty())
+            }
+            composable("lesson-exercises/{id}") { entry ->
+                ExercisesScreen(vm, navController, entry.arguments?.getString("id").orEmpty())
+            }
+            composable("lesson-flashcards/{id}") { entry ->
+                FlashcardsScreen(vm, entry.arguments?.getString("id").orEmpty())
+            }
+            composable("lesson-quiz/{id}") { entry ->
+                QuizScreen(vm, entry.arguments?.getString("id").orEmpty())
             }
         }
     }

@@ -1,14 +1,17 @@
-MECHLAB ACADEMY 1.0.0 — VALIDATION REPORT
-Data: 2026-07-21
+MECHLAB ACADEMY 2.0.0 — VALIDATION REPORT
+Data: 2026-07-22
 
-AMBIENTE
+AMBIENTE LOCALE
 Java: openjdk version "21.0.10" 2026-01-20
 Kotlin CLI: info: kotlinc-jvm 1.9.0 (JRE 21.0.10+7-Debian-1deb13u1)
-Gradle: non installato
-Android SDK manager: non presente
+Python: Python 3.13.5
+Node: v22.16.0
+FFmpeg: ffmpeg version 7.1.3-0+deb13u1 Copyright (c) 2000-2025 the FFmpeg developers
+Gradle: non installato nel PATH
+Android SDK: non disponibile nel container
 
 1) VALIDAZIONE PROGETTO
-Project structure, versions, packages, routes, placeholders and source delimiters: OK
+Project structure, versions, packages, routes, ecosystem, video assets and portal copies: OK
 
 2) VALIDAZIONE DATASET
 {
@@ -20,17 +23,35 @@ Project structure, versions, packages, routes, placeholders and source delimiter
   "glossary": 2500,
   "maps": 200,
   "labs": 200,
-  "videos": 19,
+  "videos": 29,
   "tools": 150,
   "notes": 2,
   "study_plan": 5
 }
-Dataset, IDs, unique content fields, foreign references, map edges, video URL shape and XML: OK
+Dataset, IDs, unique content fields, foreign references, map edges, video sources and XML: OK
 
 3) SMOKE TEST KOTLIN PURO
 Pure Kotlin domain smoke tests: OK
 
+4) PORTALE/PWA
+JavaScript app.js: sintassi OK
+Service worker sw.js: sintassi OK
+Catalogo JSON: sintassi OK
+Catalogo: 12 materie, 840 lezioni, 29 video
+
+5) VIDEO ACADEMY
+10 MP4 validati: H.264/AAC, 960x540, audio presente, copie Android/PWA identiche.
+Durata totale: 11.6 minuti. Dimensione Android video: 11.43 MiB.
+Storyboard/copioni/SRT: presenti per 10 videolezioni originali.
+Generatore MechLab Studio: sintassi Python OK.
+
+6) PULIZIA E COERENZA
+Nessun build intermedio o __pycache__ incluso nella consegna.
+Gli ID e i riferimenti didattici sono controllati dal validatore dataset.
+Le copie video del portale corrispondono byte per byte a quelle Android.
+
 ESITO
 Controlli locali disponibili: SUPERATI.
-Build Android, KSP, Compose, lint, test strumentali e APK: NON ESEGUITI localmente per assenza di Android SDK/Gradle e dipendenze.
-Il workflow .github/workflows/android.yml è predisposto per eseguirli in GitHub Actions.
+Build Android 2.0, KSP, Compose, lint, test Android e APK: NON ESEGUITI localmente per assenza di Android SDK/Gradle.
+Il workflow .github/workflows/android.yml è predisposto per la verifica reale in GitHub Actions.
+La versione 1.0 è stata compilata con successo dal repository dell'utente; la 2.0 deve essere verificata con un nuovo run CI e non viene dichiarata compilata in anticipo.

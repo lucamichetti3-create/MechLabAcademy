@@ -51,8 +51,12 @@ for name in ["quiz", "exercises", "flashcards", "maps", "labs", "videos", "tools
             ERRORS.append(f"{name}/{item['id']}: orphan lesson {item.get('lessonId')}")
 
 for video in DATA["videos"]:
-    if video["linkStatus"] != "VERIFIED" or not re.fullmatch(r"https://[^\s]+", video["url"]):
-        ERRORS.append(f"videos/{video['id']}: invalid verified URL")
+    status = video.get("linkStatus")
+    url = video.get("url", "")
+    valid_remote = status == "VERIFIED" and re.fullmatch(r"https://[^\s]+", url)
+    valid_local = status == "OFFLINE_INCLUDED" and re.fullmatch(r"raw:[a-z0-9_]+", url)
+    if not (valid_remote or valid_local):
+        ERRORS.append(f"videos/{video['id']}: invalid video source")
 
 minimums = {
     "subjects": 12,
@@ -103,4 +107,4 @@ if ERRORS:
     print("\nVALIDATION ERRORS:", file=sys.stderr)
     print("\n".join(ERRORS[:100]), file=sys.stderr)
     sys.exit(1)
-print("Dataset, IDs, unique content fields, foreign references, map edges, video URL shape and XML: OK")
+print("Dataset, IDs, unique content fields, foreign references, map edges, video sources and XML: OK")

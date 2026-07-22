@@ -8,6 +8,7 @@ import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 
 private val Context.dataStore by preferencesDataStore(name = "mechlab_settings")
@@ -29,6 +30,7 @@ class SettingsRepository(private val context: Context) {
         val hours = intPreferencesKey("hours")
         val reminder = booleanPreferencesKey("reminder")
         val goal = stringPreferencesKey("goal")
+        val contentVersion = intPreferencesKey("content_version")
     }
 
     val settings: Flow<AppSettings> = context.dataStore.data.map { preferences ->
@@ -65,5 +67,12 @@ class SettingsRepository(private val context: Context) {
 
     suspend fun setGoalDate(value: String) {
         context.dataStore.edit { it[Keys.goal] = value.trim() }
+    }
+
+    suspend fun getContentVersion(): Int =
+        context.dataStore.data.first()[Keys.contentVersion] ?: 0
+
+    suspend fun setContentVersion(value: Int) {
+        context.dataStore.edit { it[Keys.contentVersion] = value.coerceAtLeast(0) }
     }
 }

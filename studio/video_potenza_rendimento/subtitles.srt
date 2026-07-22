@@ -1,0 +1,67 @@
+1
+00:00:00,000 --> 00:00:05,922
+La potenza misura la rapidità con cui viene compiuto lavoro o trasferita energia.
+
+2
+00:00:05,922 --> 00:00:12,283
+Due macchine possono svolgere lo stesso lavoro, ma quella più potente lo esegue in meno
+
+3
+00:00:12,283 --> 00:00:12,722
+tempo.
+
+4
+00:00:12,722 --> 00:00:16,200
+La potenza media è il lavoro diviso il tempo.
+
+5
+00:00:16,200 --> 00:00:19,215
+Un watt equivale a un joule al secondo.
+
+6
+00:00:19,215 --> 00:00:23,079
+In ambito industriale incontrerai spesso kilowatt.
+
+7
+00:00:23,079 --> 00:00:29,710
+Quando forza e velocità hanno la stessa direzione, la potenza meccanica istantanea è il
+
+8
+00:00:29,710 --> 00:00:31,996
+prodotto tra forza e velocità.
+
+9
+00:00:31,996 --> 00:00:37,842
+Negli alberi rotanti, la potenza è momento torcente per velocità angolare.
+
+10
+00:00:37,842 --> 00:00:42,187
+Questa formula collega motore, coppia e numero di giri.
+
+11
+00:00:42,187 --> 00:00:46,702
+Il rendimento confronta ciò che otteniamo con ciò che forniamo.
+
+12
+00:00:46,702 --> 00:00:53,296
+È sempre minore o uguale a uno perché una parte dell’energia si disperde in calore, attrito,
+
+13
+00:00:53,296 --> 00:00:54,945
+rumore o altre perdite.
+
+14
+00:00:54,945 --> 00:00:55,962
+Ricapitoliamo.
+
+15
+00:00:55,962 --> 00:01:00,468
+La potenza descrive la velocità di trasferimento dell’energia.
+
+16
+00:01:00,468 --> 00:01:06,645
+Il rendimento misura quanto efficacemente il sistema trasforma l’energia assorbita in
+
+17
+00:01:06,645 --> 00:01:07,662
+energia utile.

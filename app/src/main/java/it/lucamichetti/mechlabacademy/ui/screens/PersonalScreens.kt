@@ -42,6 +42,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.core.content.ContextCompat
+import it.lucamichetti.mechlabacademy.BuildConfig
 import it.lucamichetti.mechlabacademy.data.local.TechnicalToolEntity
 import it.lucamichetti.mechlabacademy.domain.TechnicalCalculators
 import it.lucamichetti.mechlabacademy.ui.MainViewModel
@@ -260,6 +261,18 @@ fun ProfileScreen(vm: MainViewModel, nav: NavController) {
     ) {
         item { ScreenTitle("Profilo di Luca", "Percorso personale di preparazione al diploma") }
         item {
+            Card {
+                Column(Modifier.padding(16.dp)) {
+                    Text("MechLab Academy ${BuildConfig.VERSION_NAME}", style = MaterialTheme.typography.titleLarge)
+                    Text("Ecosistema 360°: app Android offline, Video Academy, sessioni adattive e portale web complementare.")
+                    Spacer(Modifier.height(8.dp))
+                    Button(onClick = { nav.navigate(Routes.TODAY) }, modifier = Modifier.fillMaxWidth()) {
+                        Text("Avvia Studio di oggi")
+                    }
+                }
+            }
+        }
+        item {
             Text("Anno selezionato")
             Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                 (3..5).forEach { year ->
@@ -344,10 +357,12 @@ fun ProfileScreen(vm: MainViewModel, nav: NavController) {
             Text("Risorse", style = MaterialTheme.typography.titleMedium)
             val resources = listOf(
                 "Ricerca" to Routes.SEARCH,
-                "Video" to Routes.VIDEOS,
+                "Video Academy" to Routes.VIDEOS,
+                "Studio di oggi" to Routes.TODAY,
                 "Mappe" to Routes.MAPS,
                 "Flashcard" to Routes.FLASHCARDS,
                 "Laboratorio" to Routes.LABS,
+                "Simulatori" to Routes.SIMULATORS,
                 "Glossario" to Routes.GLOSSARY,
                 "Appunti" to Routes.NOTES,
                 "Strumenti" to Routes.TOOLS,

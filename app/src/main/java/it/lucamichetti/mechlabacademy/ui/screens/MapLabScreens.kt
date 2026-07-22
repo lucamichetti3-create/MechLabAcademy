@@ -44,7 +44,7 @@ fun MapsScreen(vm: MainViewModel, nav: NavController) {
 }
 
 @Composable
-fun MapDetailScreen(vm: MainViewModel, id: String) {
+fun MapDetailScreen(vm: MainViewModel, id: String, nav: NavController) {
     val mapState by vm.repo.map(id).collectAsState(null)
     val map = mapState ?: return Loading("Mappa")
     val nodes = remember(map.nodesJson) { parseNodes(map.nodesJson) }
@@ -116,7 +116,11 @@ fun MapDetailScreen(vm: MainViewModel, id: String) {
                 Column(Modifier.padding(14.dp)) {
                     Text(node.label, style = MaterialTheme.typography.titleMedium)
                     Text("Nodo collegato alla lezione ${node.lessonId}")
-                    Text("La scheda completa può essere aperta dall’elenco della materia.")
+                    if (node.lessonId.isNotBlank()) {
+                        Button(onClick = { nav.navigate(Routes.lesson(node.lessonId)) }) {
+                            Text("Apri la lezione collegata")
+                        }
+                    }
                 }
             }
         }

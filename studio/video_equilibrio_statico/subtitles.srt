@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:06,216
+Un corpo è in equilibrio statico quando non accelera e non cambia il proprio stato di
+
+2
+00:00:06,216 --> 00:00:06,947
+rotazione.
+
+3
+00:00:06,947 --> 00:00:11,408
+Questo richiede l’equilibrio sia delle forze sia dei momenti.
+
+4
+00:00:11,408 --> 00:00:17,598
+Nel piano, la somma delle componenti orizzontali e la somma delle componenti verticali
+
+5
+00:00:17,598 --> 00:00:20,261
+devono essere entrambe uguali a zero.
+
+6
+00:00:20,261 --> 00:00:25,625
+Anche la somma algebrica dei momenti rispetto a un punto deve essere zero.
+
+7
+00:00:25,625 --> 00:00:30,046
+Scegliere bene il polo può semplificare moltissimo i calcoli.
+
+8
+00:00:30,046 --> 00:00:34,002
+Il diagramma del corpo libero è il passaggio decisivo.
+
+9
+00:00:34,002 --> 00:00:40,009
+Isola il componente e sostituisci ogni vincolo con le reazioni che può esercitare.
+
+10
+00:00:40,009 --> 00:00:44,117
+Una reazione negativa non è necessariamente un errore:
+
+11
+00:00:44,117 --> 00:00:48,605
+significa che il verso reale è opposto a quello ipotizzato.
+
+12
+00:00:48,605 --> 00:00:52,713
+Controlla comunque schema, unità e tutte le equazioni.
+
+13
+00:00:52,713 --> 00:00:53,815
+Ricapitoliamo.
+
+14
+00:00:53,815 --> 00:00:59,166
+Nel piano, l’equilibrio statico richiede tre equazioni indipendenti:
+
+15
+00:00:59,166 --> 00:01:04,596
+somma delle forze orizzontali, verticali e dei momenti uguale a zero.

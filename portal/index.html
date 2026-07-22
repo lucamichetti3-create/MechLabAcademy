@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102633">
+  <title>MechLab Academy Portal</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div>
+    <strong>MECHLAB ACADEMY</strong>
+    <span>Portale di studio tecnico</span>
+  </div>
+  <button id="installBtn" hidden>Installa portale</button>
+</header>
+<main>
+  <section class="hero card">
+    <div>
+      <p class="eyebrow">ECOSISTEMA 360°</p>
+      <h1>Teoria, video, esercizi e ripasso in un unico percorso.</h1>
+      <p>Compagno web dell’app Android. I progressi di questo portale restano nel browser.</p>
+    </div>
+    <div class="metric"><b id="lessonCount">—</b><span>lezioni indicizzate</span></div>
+  </section>
+
+  <section class="controls card">
+    <input id="search" type="search" placeholder="Cerca lezione, materia o argomento">
+    <select id="year"><option value="0">Tutti gli anni</option><option value="3">3° anno</option><option value="4">4° anno</option><option value="5">5° anno</option></select>
+    <select id="subject"><option value="">Tutte le materie</option></select>
+  </section>
+
+  <section class="layout">
+    <aside class="card">
+      <h2>Studio di oggi</h2>
+      <div id="today"></div>
+      <button id="nextLesson">Prossima lezione</button>
+    </aside>
+    <section class="card catalog">
+      <div class="section-title"><h2>Catalogo</h2><span id="resultCount"></span></div>
+      <div id="results" class="results"></div>
+    </section>
+  </section>
+
+  <section class="card simulator">
+    <div class="section-title"><h2>Laboratorio interattivo</h2><span>Momento di una forza</span></div>
+    <div class="sim-grid">
+      <div>
+        <label>Forza F: <b id="forceValue">200 N</b></label>
+        <input id="forceSlider" type="range" min="10" max="500" step="10" value="200">
+        <label>Braccio b: <b id="armValue">0,30 m</b></label>
+        <input id="armSlider" type="range" min="0.05" max="1" step="0.05" value="0.30">
+        <div class="formula-result">M = F · b = <strong id="momentValue">60,0 N·m</strong></div>
+        <p id="momentHint">Aumentando il braccio aumenta l’effetto rotatorio, anche senza aumentare la forza.</p>
+      </div>
+      <canvas id="momentCanvas" width="700" height="360" aria-label="Schema interattivo di una leva"></canvas>
+    </div>
+  </section>
+
+  <section class="card ecosystem-tools">
+    <div class="section-title"><h2>I tuoi dati nel portale</h2><span>backup browser locale</span></div>
+    <p>Esporta checklist e progressi del portale in un file JSON, oppure ripristinali su un altro computer.</p>
+    <div class="button-row">
+      <button id="exportPortal">Esporta progressi</button>
+      <label class="file-button">Importa progressi<input id="importPortal" type="file" accept="application/json" hidden></label>
+      <button id="resetPortal" class="secondary">Azzera progressi portale</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="section-title"><h2>Video Academy</h2><span>originali offline + fonti esterne</span></div>
+    <div id="videos" class="video-grid"></div>
+  </section>
+</main>
+<dialog id="lessonDialog">
+  <article>
+    <button class="close" aria-label="Chiudi">×</button>
+    <p class="eyebrow" id="dialogMeta"></p>
+    <h2 id="dialogTitle"></h2>
+    <p id="dialogIntro"></p>
+    <h3>Obiettivi</h3><ul id="dialogObjectives"></ul>
+    <h3>Riepilogo</h3><p id="dialogSummary"></p>
+    <div class="study-actions">
+      <label><input type="checkbox" data-step="theory"> Teoria</label>
+      <label><input type="checkbox" data-step="video"> Video</label>
+      <label><input type="checkbox" data-step="exercise"> Esercizio</label>
+      <label><input type="checkbox" data-step="quiz"> Quiz</label>
+    </div>
+  </article>
+</dialog>
+<script src="app.js" defer></script>
+</body>
+</html>

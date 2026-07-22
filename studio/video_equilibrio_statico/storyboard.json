@@ -1,0 +1,49 @@
+{
+  "slug": "equilibrio_statico",
+  "title": "Equilibrio statico",
+  "module": "Meccanica — Terzo anno",
+  "lessonId": "lesson_mechanics_005",
+  "topic": "Statica",
+  "outputName": "mechlab_equilibrio_statico.mp4",
+  "language": "it",
+  "voiceSpeed": 148,
+  "voicePitch": 45,
+  "scenes": [
+    {
+      "title": "Equilibrio statico",
+      "body": "Un corpo non accelera e non ruota quando forze e momenti si compensano.",
+      "voice": "Un corpo è in equilibrio statico quando non accelera e non cambia il proprio stato di rotazione. Questo richiede l’equilibrio sia delle forze sia dei momenti.",
+      "kind": "intro"
+    },
+    {
+      "title": "1. Equilibrio traslazionale",
+      "body": "ΣFx = 0\nΣFy = 0",
+      "voice": "Nel piano, la somma delle componenti orizzontali e la somma delle componenti verticali devono essere entrambe uguali a zero.",
+      "kind": "formula"
+    },
+    {
+      "title": "2. Equilibrio rotazionale",
+      "body": "ΣM = 0",
+      "voice": "Anche la somma algebrica dei momenti rispetto a un punto deve essere zero. Scegliere bene il polo può semplificare moltissimo i calcoli.",
+      "kind": "balance"
+    },
+    {
+      "title": "3. Diagramma del corpo libero",
+      "body": "Isola il corpo.\nSostituisci i vincoli con reazioni.\nIndica quote e carichi.",
+      "voice": "Il diagramma del corpo libero è il passaggio decisivo. Isola il componente e sostituisci ogni vincolo con le reazioni che può esercitare.",
+      "kind": "force"
+    },
+    {
+      "title": "4. Verifica finale",
+      "body": "Le reazioni hanno verso plausibile?\nLe unità sono coerenti?\nLe tre equazioni tornano?",
+      "voice": "Una reazione negativa non è necessariamente un errore: significa che il verso reale è opposto a quello ipotizzato. Controlla comunque schema, unità e tutte le equazioni.",
+      "kind": "example"
+    },
+    {
+      "title": "Riepilogo",
+      "body": "ΣFx = 0\nΣFy = 0\nΣM = 0",
+      "voice": "Ricapitoliamo. Nel piano, l’equilibrio statico richiede tre equazioni indipendenti: somma delle forze orizzontali, verticali e dei momenti uguale a zero.",
+      "kind": "recap"
+    }
+  ]
+}

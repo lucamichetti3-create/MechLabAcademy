@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:03,626
+Un vincolo limita i gradi di libertà di un corpo.
+
+2
+00:00:03,626 --> 00:00:10,435
+Ogni movimento impedito corrisponde, nel modello ideale, a una possibile reazione vincolare.
+
+3
+00:00:10,435 --> 00:00:17,153
+Il carrello ideale consente lo scorrimento lungo il piano e la rotazione, ma impedisce il
+
+4
+00:00:17,153 --> 00:00:18,134
+moto normale.
+
+5
+00:00:18,134 --> 00:00:20,852
+Per questo genera una sola reazione.
+
+6
+00:00:20,852 --> 00:00:27,430
+La cerniera nel piano impedisce le due traslazioni e genera due componenti di reazione, ma
+
+7
+00:00:27,430 --> 00:00:29,403
+lascia libera la rotazione.
+
+8
+00:00:29,403 --> 00:00:34,058
+L’incastro blocca tutte le possibilità di movimento nel piano.
+
+9
+00:00:34,058 --> 00:00:38,413
+Può quindi trasmettere due forze di reazione e un momento.
+
+10
+00:00:38,413 --> 00:00:41,909
+La scelta del vincolo non è un dettaglio grafico.
+
+11
+00:00:41,909 --> 00:00:45,976
+Determina le incognite e quindi le equazioni disponibili.
+
+12
+00:00:45,976 --> 00:00:50,899
+Modella ciò che il collegamento reale può effettivamente trasmettere.
+
+13
+00:00:50,899 --> 00:00:51,983
+Ricapitoliamo.
+
+14
+00:00:51,983 --> 00:00:57,560
+Conta i movimenti impediti e traduci il vincolo nelle reazioni corrette.
+
+15
+00:00:57,560 --> 00:01:02,595
+Questo è il primo passo per risolvere travi e strutture semplici.

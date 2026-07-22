@@ -1,0 +1,49 @@
+{
+  "slug": "potenza_rendimento",
+  "title": "Potenza e rendimento",
+  "module": "Meccanica — Terzo anno",
+  "lessonId": "lesson_mechanics_015",
+  "topic": "Potenza",
+  "outputName": "mechlab_potenza_rendimento.mp4",
+  "language": "it",
+  "voiceSpeed": 148,
+  "voicePitch": 45,
+  "scenes": [
+    {
+      "title": "Potenza e rendimento",
+      "body": "Non basta sapere quanta energia: conta anche in quanto tempo.",
+      "voice": "La potenza misura la rapidità con cui viene compiuto lavoro o trasferita energia. Due macchine possono svolgere lo stesso lavoro, ma quella più potente lo esegue in meno tempo.",
+      "kind": "intro"
+    },
+    {
+      "title": "1. Potenza media",
+      "body": "P = L / t\nUnità: watt [W]",
+      "voice": "La potenza media è il lavoro diviso il tempo. Un watt equivale a un joule al secondo. In ambito industriale incontrerai spesso kilowatt.",
+      "kind": "formula"
+    },
+    {
+      "title": "2. Moto traslatorio",
+      "body": "P = F · v",
+      "voice": "Quando forza e velocità hanno la stessa direzione, la potenza meccanica istantanea è il prodotto tra forza e velocità.",
+      "kind": "force"
+    },
+    {
+      "title": "3. Moto rotatorio",
+      "body": "P = M · ω",
+      "voice": "Negli alberi rotanti, la potenza è momento torcente per velocità angolare. Questa formula collega motore, coppia e numero di giri.",
+      "kind": "lever"
+    },
+    {
+      "title": "4. Rendimento",
+      "body": "η = energia utile / energia assorbita\n0 < η ≤ 1",
+      "voice": "Il rendimento confronta ciò che otteniamo con ciò che forniamo. È sempre minore o uguale a uno perché una parte dell’energia si disperde in calore, attrito, rumore o altre perdite.",
+      "kind": "example"
+    },
+    {
+      "title": "Riepilogo",
+      "body": "P = L/t\nP = Fv\nP = Mω\nη = utile/assorbita",
+      "voice": "Ricapitoliamo. La potenza descrive la velocità di trasferimento dell’energia. Il rendimento misura quanto efficacemente il sistema trasforma l’energia assorbita in energia utile.",
+      "kind": "recap"
+    }
+  ]
+}

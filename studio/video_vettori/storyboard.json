@@ -1,0 +1,49 @@
+{
+  "slug": "vettori",
+  "title": "Vettori e componenti",
+  "module": "Meccanica — Terzo anno",
+  "lessonId": "lesson_mechanics_002",
+  "topic": "Vettori",
+  "outputName": "mechlab_vettori.mp4",
+  "language": "it",
+  "voiceSpeed": 148,
+  "voicePitch": 45,
+  "scenes": [
+    {
+      "title": "Vettori e componenti",
+      "body": "Una forza non è solo un numero.\nHa intensità, direzione e verso.",
+      "voice": "Molte grandezze meccaniche, come forza, velocità e accelerazione, sono vettori. Non basta conoscerne il valore: servono intensità, direzione e verso.",
+      "kind": "intro"
+    },
+    {
+      "title": "1. Rappresentazione",
+      "body": "Un vettore è una freccia:\nlunghezza → intensità\nretta → direzione\npunta → verso",
+      "voice": "Un vettore si rappresenta con una freccia. La lunghezza indica l’intensità, la retta d’azione indica la direzione e la punta indica il verso.",
+      "kind": "force"
+    },
+    {
+      "title": "2. Componenti cartesiane",
+      "body": "Fx = F · cos α\nFy = F · sin α",
+      "voice": "Per lavorare con un vettore inclinato, lo scomponiamo lungo gli assi cartesiani. La componente orizzontale è effe per coseno alfa e quella verticale è effe per seno alfa.",
+      "kind": "formula"
+    },
+    {
+      "title": "3. Esempio",
+      "body": "F = 100 N, α = 30°\nFx ≈ 86,6 N\nFy = 50 N",
+      "voice": "Con una forza di cento newton inclinata di trenta gradi, la componente orizzontale vale circa ottantasei virgola sei newton e quella verticale cinquanta newton.",
+      "kind": "example"
+    },
+    {
+      "title": "4. Somma vettoriale",
+      "body": "Rx = ΣFx\nRy = ΣFy\nR = √(Rx² + Ry²)",
+      "voice": "Per sommare più forze, somma prima tutte le componenti orizzontali e verticali. Poi ricostruisci il modulo della risultante con il teorema di Pitagora.",
+      "kind": "balance"
+    },
+    {
+      "title": "Riepilogo",
+      "body": "Scomponi → somma → ricomponi\nControlla segni e angoli",
+      "voice": "Ricapitoliamo. Rappresenta correttamente il vettore, scomponilo sugli assi, somma le componenti con il loro segno e ricostruisci la risultante.",
+      "kind": "recap"
+    }
+  ]
+}

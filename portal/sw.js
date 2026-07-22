@@ -1,0 +1,5 @@
+const CACHE='mechlab-portal-v3';
+const CORE=["./", "index.html", "styles.css", "app.js", "manifest.webmanifest", "data/catalog.json", "icons/icon-192.png", "icons/icon-512.png", "media/mechlab_attrito.mp4", "media/mechlab_equilibrio_statico.mp4", "media/mechlab_forze_momenti.mp4", "media/mechlab_grandezze_unita.mp4", "media/mechlab_lavoro_energia.mp4", "media/mechlab_moto_rettilineo.mp4", "media/mechlab_potenza_rendimento.mp4", "media/mechlab_sistemi_forze.mp4", "media/mechlab_vettori.mp4", "media/mechlab_vincoli_reazioni.mp4"];
+self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE))));
+self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key))))));
+self.addEventListener('fetch',event=>event.respondWith(caches.match(event.request).then(cached=>cached||fetch(event.request).then(response=>{if(event.request.method==='GET'&&response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy));}return response;}))));

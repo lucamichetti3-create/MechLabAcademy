@@ -140,3 +140,30 @@ Per aggiungere grandi quantità di contenuti senza perdere i progressi:
 5. registrare le modifiche in un changelog del pacchetto;
 6. validare l’intero grafo prima della distribuzione;
 7. provare l’aggiornamento su una copia di un database già utilizzato.
+
+## Video Academy 2.0
+
+### Video locale incluso nell’APK
+
+1. Creare o copiare un MP4 H.264/AAC in `app/src/main/res/raw/`.
+2. Usare un nome Android valido: minuscole, numeri e underscore.
+3. Aggiungere la scheda a `app/src/main/assets/seed/videos.json` con:
+
+```json
+{
+  "url": "raw:mechlab_nome_video",
+  "platform": "MECHLAB_LOCAL",
+  "linkStatus": "OFFLINE_INCLUDED"
+}
+```
+
+4. Incrementare `CONTENT_VERSION` in `SeedImporter.kt` se l’aggiornamento deve essere importato anche dagli utenti che possiedono già il database.
+5. Copiare il file anche in `portal/media/` e rigenerare il catalogo con `python tools/build_portal_catalog.py`.
+
+### YouTube
+
+Inserire esclusivamente l’URL ufficiale del singolo video. L’app riconosce URL `watch`, `youtu.be`, `embed` e `shorts`. Se l’incorporamento non è disponibile, il pulsante “Apri fonte” avvia l’app YouTube o il browser.
+
+### Aggiornamento senza perdere i progressi
+
+Le entità statiche vengono importate con `@Upsert`. I progressi sono tabelle separate; preferiti e stato visto dei video esistenti vengono preservati durante il refresh editoriale.

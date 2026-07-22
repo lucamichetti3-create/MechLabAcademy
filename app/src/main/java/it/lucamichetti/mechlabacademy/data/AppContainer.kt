@@ -17,7 +17,7 @@ class AppContainer(context: Context) {
 
     val settings = SettingsRepository(context.applicationContext)
     val repository = AcademyRepository(database.academyDao())
-    val seedImporter = SeedImporter(context.applicationContext, database)
+    val seedImporter = SeedImporter(context.applicationContext, database, settings)
     val backupManager = BackupManager(context.applicationContext, database)
     val reminderScheduler = ReminderScheduler(context.applicationContext)
 }

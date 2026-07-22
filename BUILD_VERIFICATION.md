@@ -1,79 +1,63 @@
-# BUILD_VERIFICATION
+# BUILD_VERIFICATION — MechLab Academy 2.0.0
 
-**Data:** 21 luglio 2026
+**Data:** 22 luglio 2026
 
-## Ambiente disponibile
+## Stato noto
 
-- Java presente: JDK 21 nel container;
-- compilatore Kotlin CLI presente;
-- Android SDK: non presente;
-- Gradle: non presente;
-- cache completa delle dipendenze Android: non presente;
-- download dei binari Android/Gradle non disponibile in modo affidabile nel container.
+La versione 1.0 del progetto è stata realmente compilata con GitHub Actions, ha superato test e lint ed è stata installata e avviata su un dispositivo Android. La versione 2.0 aggiunge Media3, video locali, nuove schermate, ricerca estesa, aggiornamento seed e portale PWA.
 
-## Controlli realmente eseguiti
+Nel container usato per produrre questa consegna non erano disponibili Android SDK, Gradle completo e cache delle dipendenze Android. Per questo motivo **non si dichiara una compilazione Android 2.0 locale riuscita**. Il workflow GitHub Actions è configurato per effettuare la verifica completa dopo il caricamento nel repository.
 
-1. Validazione della struttura del progetto, delle versioni dichiarate, dei package e delle route.
-2. Parsing di tutti i JSON seed.
-3. Verifica dell’unicità degli ID.
-4. Verifica dell’unicità dei principali campi editoriali: titoli, domande, esercizi, flashcard, termini, mappe e laboratori.
-5. Verifica dei riferimenti materia/lezione e assenza di riferimenti orfani nei dataset principali.
-6. Verifica dei nodi e degli archi delle mappe.
-7. Verifica delle quantità minime, salvo il requisito dei 1.000 video verificati, esplicitamente non raggiunto.
-8. Controllo della forma HTTPS e dello stato `VERIFIED` dei video pubblicati.
-9. Parsing XML di manifest, temi, backup rules, data extraction rules e icona vettoriale.
-10. Compilazione con `kotlinc` della logica Kotlin pura `StudyLogic.kt`.
-11. Esecuzione dello smoke test su calcolatori, progressi e ripetizione dilazionata.
-12. Ricerca di testi segnaposto, delimitatori sbilanciati e package inattesi.
-13. Generazione del manifest dei file e del checksum SHA-256 dell’archivio finale.
+## Controlli realmente eseguiti sulla 2.0
 
-Esiti dell’ultima esecuzione:
+- parsing di tutti i JSON seed;
+- quantità minime, ID univoci e riferimenti non orfani;
+- controllo delle sorgenti video locali e HTTPS;
+- parsing di tutti gli XML;
+- controllo statico di struttura, versioni, package, route e parentesi;
+- compilazione Kotlin della logica pura `StudyLogic.kt` e `VideoSources.kt`;
+- test manuale del resolver video locale/YouTube;
+- `node --check` su JavaScript del portale e del service worker;
+- parsing del catalogo PWA;
+- verifica FFprobe di tutti i 10 MP4: H.264 video, AAC audio, risoluzione 960×540;
+- generazione del catalogo web dai seed Android;
+- verifica della pipeline video Python tramite `py_compile`;
+- creazione e riproducibilità di storyboard, copioni e sottotitoli.
+
+Esito dataset:
 
 ```text
-Project structure, versions, packages, routes, placeholders and source delimiters: OK
-Dataset, IDs, unique content fields, foreign references, map edges, video URL shape and XML: OK
-Pure Kotlin domain smoke tests: OK
+subjects 12
+lessons 840
+quiz 2200
+exercises 1200
+flashcards 2100
+glossary 2500
+maps 200
+labs 200
+videos 29
+tools 150
+Dataset, IDs, unique content fields, foreign references, map edges, video sources and XML: OK
 ```
 
-## Controlli non eseguiti localmente
+## Verifica completa da eseguire in CI
 
-- sincronizzazione Gradle Android;
-- elaborazione KSP/Room;
-- compilazione Compose;
-- lint Android;
-- test strumentali;
-- installazione su dispositivo;
-- generazione dell’APK.
+```bash
+gradle --console=plain --stacktrace testDebugUnitTest
+gradle --console=plain --stacktrace lintDebug assembleDebug
+```
 
-Questo documento **non dichiara che il progetto Android sia già stato compilato**.
+Il workflow `.github/workflows/android.yml` pubblica l’APK solo se queste fasi riescono.
 
-## Configurazione predisposta
+## Configurazione
 
 - Android Gradle Plugin: 9.3.0;
 - Gradle CI: 9.5.0;
-- JDK CI: 17;
-- compileSdk/targetSdk: 37;
+- JDK: 17;
+- compileSdk: 37;
+- targetSdk: 36;
 - minSdk: 23;
-- Kotlin e plugin Compose: 2.4.10;
-- Compose BOM: 2026.06.00;
+- Media3: 1.10.1;
 - Room: 2.8.4;
 - Navigation Compose: 2.9.8;
-- WorkManager: 2.11.2;
-- DataStore: 1.2.1;
-- KSP: 2.3.10.
-
-AGP 9 usa Kotlin integrato: il plugin `org.jetbrains.kotlin.android` non è applicato. Il progetto include un launcher `gradlew` testuale che usa un’installazione Gradle disponibile; il JAR binario standard del wrapper non è incluso. GitHub Actions installa esplicitamente Gradle 9.5.0 prima della build.
-
-## Ripetere la verifica
-
-```bash
-python tools/validate_project.py
-python tools/validate_dataset.py
-kotlinc app/src/main/java/it/lucamichetti/mechlabacademy/domain/StudyLogic.kt \
-  tools/kotlin-smoke/SmokeMain.kt -include-runtime -d mechlab-smoke.jar
-java -jar mechlab-smoke.jar
-gradle --stacktrace testDebugUnitTest
-gradle --stacktrace lintDebug assembleDebug
-```
-
-In GitHub: aprire **Actions → Android CI → Run workflow**. Il workflow pubblica `MechLabAcademy-debug-apk` soltanto se la build riesce e conserva i report disponibili anche in caso di errore.
+- WorkManager: 2.11.2.

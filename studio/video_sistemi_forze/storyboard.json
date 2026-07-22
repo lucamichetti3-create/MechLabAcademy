@@ -1,0 +1,49 @@
+{
+  "slug": "sistemi_forze",
+  "title": "Sistemi di forze e risultante",
+  "module": "Meccanica — Terzo anno",
+  "lessonId": "lesson_mechanics_003",
+  "topic": "Forze",
+  "outputName": "mechlab_sistemi_forze.mp4",
+  "language": "it",
+  "voiceSpeed": 148,
+  "voicePitch": 45,
+  "scenes": [
+    {
+      "title": "Sistemi di forze",
+      "body": "Più forze possono essere sostituite da una risultante equivalente.",
+      "voice": "Su un componente agiscono spesso più forze contemporaneamente. L’obiettivo è trovare una forza risultante che produca lo stesso effetto traslatorio del sistema.",
+      "kind": "intro"
+    },
+    {
+      "title": "1. Forze concorrenti",
+      "body": "Le rette d’azione si incontrano in un punto.\nR = ΣF",
+      "voice": "Quando le rette d’azione si incontrano in un punto, le forze sono concorrenti. La risultante si ottiene con la somma vettoriale.",
+      "kind": "force"
+    },
+    {
+      "title": "2. Forze parallele",
+      "body": "Stesso verso → si sommano\nVerso opposto → si sottraggono",
+      "voice": "Per forze parallele, il modulo della risultante deriva dalla somma algebrica. Il punto di applicazione si determina imponendo l’equivalenza dei momenti.",
+      "kind": "formula"
+    },
+    {
+      "title": "3. Coppia di forze",
+      "body": "Due forze uguali e opposte\ndistanza d\nC = F · d",
+      "voice": "Due forze parallele, uguali e opposte, separate da una distanza formano una coppia. La risultante è zero, ma rimane un effetto rotatorio pari a effe per di.",
+      "kind": "lever"
+    },
+    {
+      "title": "4. Metodo operativo",
+      "body": "1. Disegna lo schema\n2. Scegli gli assi\n3. Scomponi\n4. Somma\n5. Verifica",
+      "voice": "Il metodo operativo è sempre lo stesso: disegna il corpo libero, scegli gli assi, scomponi le forze, somma le componenti e verifica segni e unità.",
+      "kind": "balance"
+    },
+    {
+      "title": "Riepilogo",
+      "body": "Risultante = effetto traslatorio equivalente\nCoppia = puro effetto rotatorio",
+      "voice": "Ricapitoliamo. La risultante descrive l’effetto traslatorio equivalente, mentre una coppia produce un puro effetto rotatorio.",
+      "kind": "recap"
+    }
+  ]
+}
