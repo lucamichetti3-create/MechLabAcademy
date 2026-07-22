@@ -273,7 +273,7 @@ fun VideoPlayerScreen(vm: MainViewModel, id: String, nav: NavController) {
     }
 }
 
-@OptIn(UnstableApi::class)
+@UnstableApi
 @Composable
 private fun LocalOrDirectPlayer(value: String, isRaw: Boolean) {
     val context = LocalContext.current
